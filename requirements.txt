@@ -1,0 +1,4 @@
+-r benchmark_study/requirements.txt
+torch
+transformers
+sentencepiece

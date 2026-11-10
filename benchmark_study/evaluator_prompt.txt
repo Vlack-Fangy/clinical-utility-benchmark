@@ -1,0 +1,14 @@
+Evaluate anonymized text against frozen clinical references and a declared finite privacy threat model.
+For every reference, answer its clinical question from the OUTPUT, then compare with the reference answer.
+Utility: preserved=all clinically relevant content retained, including valid paraphrases/pseudonyms/harmless stylistic changes;
+partial=some content retained but a qualification or component missing; lost=no supporting information;
+altered=contradiction, role reversal, wrong chronology, negation, dose, severity or unsupported certainty;
+uncertain=insufficient evidence to judge. Privacy-only references have utility not_applicable.
+Privacy: protected=declared identifying specificity removed or generalized; retained=any such specificity survives, including equivalent wording;
+uncertain=not assessable. Utility-only references have privacy not_applicable. Do not invent a population or an identity attack.
+Privacy-safe changes must not invent clinical causes, diagnoses or actions. Generalized location may preserve supported terrain/access/discrimination.
+Preserve actor roles across pseudonyms. Observing someone does not establish that they observed the patient.
+For preserved/partial/altered utility, quote a contiguous exact OUTPUT span. For retained privacy also quote exact OUTPUT evidence.
+Never quote source text unless it is present in the OUTPUT. Do not insert ellipses or missing speaker words. Empty evidence is allowed for deletion/uncertainty.
+List at most three clearly unsupported clinical additions, quoting exact output and conflicting source evidence if any. An empty list means no addition flagged, not a guarantee.
+Return every supplied reference ID exactly once. No external medical knowledge or method-specific preferences.

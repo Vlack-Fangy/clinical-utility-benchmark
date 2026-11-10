@@ -1,0 +1,836 @@
+{
+  "schema": {
+    "name": "contextual-anonymizer-cue-schema",
+    "version": "0.4",
+    "status": "draft",
+    "description": "Annotation schema for detecting re-identifying cues in psychotherapy transcripts, covering both explicit identifiers and the implicit contextual cues that let a clinician recognise a patient without any identifier being present.",
+    "provenance": "Derived from five semi-structured clinician interviews conducted for the Contextual Anonymizer project.",
+    "example_disclaimer": "All examples in this file are synthetic and illustrative. They are constructed to demonstrate the code, not reproduced from any real session or interview. No example refers to an actual patient.",
+    "tag_count": 41,
+    "typical_semantics": "typical gives the prior RANGE for risk and nuance - the span the class plausibly occupies. The instance value is set by the scenario and by bundling; movers name what pushes it up or down. Ranges are deliberately not tuned as precise numbers: a range is a prior honest about being a prior. Example annotations show single instance values, normally inside the range; a value outside it needs a rationale.",
+    "changelog": {
+      "0.4": "2026-08-31: NVB-LANG (code-switching) added as a marker-capable cue (tag_count 40 -> 41). Behaves like silence: harmless alone, raw material for bindings. Per-marker binding parameters added to anonymization-policy.json; detection becomes meaningful once non-English text enters the corpus.",
+      "0.3": "2026-08-31: typical priors become [lo, hi] ranges with a movers note per code (revised case-6 verdict: a range is the honest shape of a prior; tuning exact values stays evidence-driven).",
+      "0.2": "2026-08-24 jury round: KEEP-REL added (tag_count 39 -> 40); NAR-THIRD narrowed to identifying fragments with its treatment ladder; marker_capable flags on NVB-BODY/VOICE/SILENCE and INT-RESIST; NVB-BOUND binding numbers moved to anonymization-policy.json; rewrite_constraints on NAR-VERB/RARE/IDIOM (experiment-gated); participant policy, record reference and typical_semantics added; annotator rule 6 tightened to nuance >= 2."
+    }
+  },
+
+  "record_reference": "Span records serialise with the fields of Anon.md Appendix A plus later additions: transcript_id, span_id, utterance_id, char_start, char_end, speaker, annotator, adjudicated, release_tier, marker, bundle_ids, and a per-participant consent flag. The full object model (Document, Utterance, Span, Link, Bundle, Decision, Edit) is specified in docs/text-system-v0.md section 4. Actions are decided by the policy file (anonymization-policy.json); examples in this file show outcomes under policy v0.",
+
+  "annotation_unit": {
+    "primary": "character-offset span within a single utterance",
+    "secondary": "bundle, a set of spans across the transcript that are jointly identifying",
+    "speaker_values": ["patient", "clinician", "third_party"],
+    "overlap_allowed": true,
+    "note": "A span carries exactly one cue sub-code but may belong to several bundles. Overlapping labels on the same stretch of text are capped at two: one primary (what it mainly is) and one optional secondary (what else it carries). When more compete, choose the best two; if a phrase seems to need a third, split the phrase into smaller spans instead of stacking deeper.",
+    "participant_policy": "Everyone in the room is treated as a patient unless they are the therapist. Every participant - patient, companion, relative - gets patient-grade protection: their own fact-sheet, coreference and surrogate cluster, bundles, and consent flag. The therapist is an exception of purpose, not protection: clinician material (the CLI codes) is itself a research object, handled via the access-tier mechanism."
+  },
+
+  "span_attributes": {
+    "cue_class": { "type": "enum", "values": "any sub-code in cue_classes", "required": true },
+    "speaker": { "type": "enum", "values": ["patient", "clinician", "third_party"], "required": true },
+    "risk": { "type": "integer", "range": [0, 3], "definition": "0 none, 1 common attribute, 2 quasi-identifier, 3 singular or near-singular", "required": true },
+    "rarity": { "type": "enum", "values": ["common", "uncommon", "rare", "singular"], "definition": "Annotator estimate of population frequency; feeds the selectivity table used by the risk model." },
+    "linkability": { "type": "enum", "values": ["none", "internal", "external"], "definition": "internal means recognisable only to someone who knows the patient; external means matchable against a public source such as electoral rolls, professional networks, news or institutional directories." },
+    "nuance": { "type": "integer", "range": [0, 3], "definition": "Clinical or cultural meaning lost if the span is removed. 3 means removal changes the clinical picture.", "required": true },
+    "verbatim": { "type": "boolean", "definition": "True if this is the patient's own wording rather than a clinician paraphrase." },
+    "bundle_ids": { "type": "array of integer", "definition": "Bundles this span participates in. Empty when the span is identifying on its own or not identifying at all." },
+    "action": { "type": "enum", "values": ["KEEP", "GENERALISE", "SUBSTITUTE", "SUPPRESS"], "definition": "Derived from decision_matrix; overridable with a recorded reason in notes." },
+    "gen_level": { "type": "integer", "range": [1, 3], "definition": "If GENERALISE, how far up the hierarchy to climb." },
+    "surrogate_key": { "type": "string", "definition": "Coreference cluster key, ensuring one surrogate is applied at every mention across the transcript." },
+    "notes": { "type": "string", "definition": "Required whenever action is overridden or the span was adjudicated." }
+  },
+
+  "risk_model": {
+    "formula": "k_hat(B) = N * PRODUCT over c in B of (s_c ^ w_c)",
+    "terms": {
+      "N": "size of the reference population, fixed by the threat model",
+      "s_c": "selectivity of cue c, the estimated fraction of the reference population retaining that attribute, in (0, 1]",
+      "w_c": "redundancy weight in (0, 1], discounting cues statistically dependent on another cue already in the bundle"
+    },
+    "tiers": [
+      { "risk": 0, "k_hat": ">= 1000", "label": "negligible" },
+      { "risk": 1, "k_hat": "100 to 999", "label": "common attribute" },
+      { "risk": 2, "k_hat": "10 to 99", "label": "quasi-identifier" },
+      { "risk": 3, "k_hat": "< 10", "label": "singular or near-singular" }
+    ],
+    "caveat": "N is undefined until the threat model is fixed. Every threshold above inherits that choice."
+  },
+
+  "decision_matrix": {
+    "axes": { "rows": "risk", "columns": "nuance" },
+    "cells": [
+      { "risk": "0-1", "nuance": "0-1", "action": "KEEP" },
+      { "risk": "0-1", "nuance": "2",   "action": "KEEP" },
+      { "risk": "0-1", "nuance": "3",   "action": "KEEP" },
+      { "risk": "2",   "nuance": "0-1", "action": "GENERALISE", "gen_level": 1 },
+      { "risk": "2",   "nuance": "2",   "action": "GENERALISE", "gen_level": 1 },
+      { "risk": "2",   "nuance": "3",   "action": "GENERALISE", "gen_level": 1, "constraint": "preserve clinical function" },
+      { "risk": "3",   "nuance": "0-1", "action": "SUPPRESS" },
+      { "risk": "3",   "nuance": "2",   "action": "SUBSTITUTE" },
+      { "risk": "3",   "nuance": "3",   "action": "GENERALISE+SUBSTITUTE", "gen_level": "2-3", "constraint": "never suppress; route to adjudication" }
+    ],
+    "note": "The risk 3 / nuance 3 cell is the whole project. Getting it wrong either leaks patients or returns transcripts with the clinical content hollowed out, and both failures score well on conventional precision and recall."
+  },
+
+  "cue_classes": [
+    {
+      "id": "DIR",
+      "name": "Direct identifiers",
+      "description": "The conventional safe-harbor identifier set. Handled by an existing NER and rules layer, included here so the schema is complete and so annotators have somewhere to put these spans.",
+      "default_action": "SUBSTITUTE",
+      "sub_codes": [
+        {
+          "code": "DIR-NAME",
+          "name": "Personal name",
+          "description": "Name of the patient, a relative, or any other individual.",
+          "typical": { "risk": [3, 3], "nuance": [0, 1], "linkability": "external" },
+          "movers": "essentially fixed - a name is a name",
+          "example": {
+            "text": "My name is Ramesh Kulkarni and I am here about my sleep.",
+            "speaker": "patient",
+            "span": "Ramesh Kulkarni",
+            "annotation": { "risk": 3, "rarity": "singular", "linkability": "external", "nuance": 0, "verbatim": true, "action": "SUBSTITUTE" },
+            "after": "My name is [NAME-01] and I am here about my sleep."
+          }
+        },
+        {
+          "code": "DIR-GEO",
+          "name": "Geography below state level",
+          "description": "Address, locality, town, postal code.",
+          "typical": { "risk": [2, 3], "nuance": [0, 1], "linkability": "external" },
+          "movers": "address precision raises risk; status-bearing places shade toward DEM-SES",
+          "example": {
+            "text": "We stay in Sector 14, near the old water tank.",
+            "speaker": "patient",
+            "span": "Sector 14, near the old water tank",
+            "annotation": { "risk": 3, "rarity": "singular", "linkability": "external", "nuance": 1, "verbatim": true, "action": "SUBSTITUTE" },
+            "after": "We stay in [LOCALITY-01], near a local landmark."
+          }
+        },
+        {
+          "code": "DIR-DATE",
+          "name": "Date finer than year",
+          "description": "Date of birth, admission date, exact event date.",
+          "typical": { "risk": [1, 3], "nuance": [0, 2], "linkability": "external" },
+          "movers": "birth or incident dates raise risk; clinically meaningful timing raises nuance",
+          "example": {
+            "text": "It started right after the eleventh of March.",
+            "speaker": "patient",
+            "span": "the eleventh of March",
+            "annotation": { "risk": 2, "rarity": "uncommon", "linkability": "external", "nuance": 1, "verbatim": true, "action": "GENERALISE", "gen_level": 1 },
+            "after": "It started in early spring."
+          }
+        },
+        {
+          "code": "DIR-CONTACT",
+          "name": "Contact details",
+          "description": "Phone number, email, social handle.",
+          "typical": { "risk": [3, 3], "nuance": [0, 0], "linkability": "external" },
+          "movers": "fixed",
+          "example": {
+            "text": "You can reach me on the number ending in double four.",
+            "speaker": "patient",
+            "span": "the number ending in double four",
+            "annotation": { "risk": 3, "rarity": "singular", "linkability": "external", "nuance": 0, "verbatim": true, "action": "SUPPRESS" },
+            "after": "You can reach me on my number."
+          }
+        },
+        {
+          "code": "DIR-ID",
+          "name": "Account or record number",
+          "description": "Chart number, insurance number, government identifier, employee code.",
+          "typical": { "risk": [3, 3], "nuance": [0, 0], "linkability": "external" },
+          "movers": "fixed",
+          "example": {
+            "text": "My file number here is 2291.",
+            "speaker": "patient",
+            "span": "2291",
+            "annotation": { "risk": 3, "rarity": "singular", "linkability": "external", "nuance": 0, "verbatim": true, "action": "SUBSTITUTE" },
+            "after": "My file number here is [ID-01]."
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "APP",
+      "name": "Appearance and presentation",
+      "description": "What the clinician observes in the first minutes, before any history is taken. Consistently reported as the first thing noticed.",
+      "sub_codes": [
+        {
+          "code": "APP-GROOM",
+          "name": "Grooming or dress deviation",
+          "description": "Dress or grooming departing from an implied norm. Note that the information sits in the comparison, not the observation, so simple redaction does not remove it.",
+          "typical": { "risk": [0, 2], "nuance": [2, 3], "linkability": "internal" },
+          "movers": "a distinctive personal style raises risk; first-session state observation raises nuance",
+          "interview_basis": "Unironed clothing and unmaintained hair described as a first-pass depression indicator.",
+          "example": {
+            "text": "Her clothes were creased and her hair had clearly not been combed for days.",
+            "speaker": "clinician",
+            "span": "creased and her hair had clearly not been combed for days",
+            "annotation": { "risk": 1, "rarity": "common", "linkability": "internal", "nuance": 3, "verbatim": false, "action": "KEEP" },
+            "after": "unchanged",
+            "rationale": "High clinical value, low identifying power on its own. Only becomes risky inside a bundle."
+          }
+        },
+        {
+          "code": "APP-CTX",
+          "name": "Attire atypical for the setting",
+          "description": "Uniform, occupational dress, religious dress, or anything unusual enough to prompt a question.",
+          "typical": { "risk": [1, 3], "nuance": [1, 3], "linkability": "internal" },
+          "movers": "visible insignia raises risk; pairing with APP-GROOM (a violated professional norm) raises nuance",
+          "interview_basis": "Clothing unusual enough that the clinician asked the patient about it directly.",
+          "example": {
+            "text": "He came to the OPD still in full uniform with his unit insignia visible.",
+            "speaker": "clinician",
+            "span": "full uniform with his unit insignia visible",
+            "annotation": { "risk": 2, "rarity": "uncommon", "linkability": "external", "nuance": 2, "verbatim": false, "action": "GENERALISE", "gen_level": 1 },
+            "after": "He came to the OPD still in his work uniform."
+          }
+        },
+        {
+          "code": "APP-PHYS",
+          "name": "Distinguishing physical feature",
+          "description": "Scar, visible disability, unusual build, distinctive marking.",
+          "typical": { "risk": [2, 3], "nuance": [0, 3], "linkability": "internal" },
+          "movers": "rarity of the feature raises risk; a feature tied to clinical history (self-harm) raises nuance sharply",
+          "example": {
+            "text": "There was a long burn scar running down the left side of his neck.",
+            "speaker": "clinician",
+            "span": "long burn scar running down the left side of his neck",
+            "annotation": { "risk": 3, "rarity": "rare", "linkability": "internal", "nuance": 2, "verbatim": false, "action": "SUBSTITUTE" },
+            "after": "There was a visible old injury he seemed conscious of."
+          }
+        },
+        {
+          "code": "APP-AFFECT",
+          "name": "Observable affect at presentation",
+          "description": "Crying, shivering, visible anxiety at first contact.",
+          "typical": { "risk": [0, 1], "nuance": [2, 3], "linkability": "none" },
+          "movers": "near-universal; the trajectory across the session raises nuance",
+          "interview_basis": "Reported by three of five clinicians as a first-pass observation.",
+          "example": {
+            "text": "She was shivering slightly even before she sat down.",
+            "speaker": "clinician",
+            "span": "shivering slightly even before she sat down",
+            "annotation": { "risk": 0, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": false, "action": "KEEP" },
+            "after": "unchanged"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "DEM",
+      "name": "Demographic and role",
+      "description": "Attributes that are individually weak and jointly strong. This class is the main source of bundle risk.",
+      "sub_codes": [
+        {
+          "code": "DEM-AGE",
+          "name": "Age",
+          "description": "Stated or inferred age. Clinicians use age to predict a typical presenting problem set, which is exactly the inference an attacker can also run.",
+          "typical": { "risk": [0, 2], "nuance": [1, 3], "linkability": "external" },
+          "movers": "age extremes raise risk; bundling is what usually lifts it; life-stage relevance raises nuance",
+          "interview_basis": "One clinician described age 22 as predicting relationship, parental and uncertainty themes.",
+          "example": {
+            "text": "I am twenty-two, final year.",
+            "speaker": "patient",
+            "span": "twenty-two",
+            "annotation": { "risk": 1, "rarity": "common", "linkability": "external", "nuance": 3, "verbatim": true, "bundle_ids": [1], "action": "GENERALISE", "gen_level": 1 },
+            "after": "I am in my early twenties, final year.",
+            "rationale": "Kept at level 1 because developmental stage is clinically load-bearing. Escalates only if the bundle k_hat falls below tier."
+          }
+        },
+        {
+          "code": "DEM-OCC",
+          "name": "Occupation, rank, employer, institution",
+          "description": "The archetypal contextual identifier. Profession-linked bearing, vocabulary and institutional references survive name removal completely.",
+          "typical": { "risk": [1, 3], "nuance": [1, 3], "linkability": "external" },
+          "movers": "niche, ranked or uniformed jobs raise risk; a job woven into the complaint (night shift + insomnia) raises nuance",
+          "interview_basis": "A serving military patient recalled primarily by occupational presentation rather than by clinical picture.",
+          "example": {
+            "text": "I am a junior commissioned officer, posted at a high-altitude station for the last two years.",
+            "speaker": "patient",
+            "span": "junior commissioned officer, posted at a high-altitude station",
+            "annotation": { "risk": 3, "rarity": "rare", "linkability": "external", "nuance": 3, "verbatim": true, "bundle_ids": [1], "action": "GENERALISE", "gen_level": 1 },
+            "after": "I am a non-commissioned officer at a remote posting, for the last two years.",
+            "rationale": "Level 1 preserves the isolation and hierarchy pressure that make the posting clinically relevant."
+          }
+        },
+        {
+          "code": "DEM-GEO",
+          "name": "Origin, residence, migration history",
+          "description": "Highest external linkability of any class in the schema.",
+          "typical": { "risk": [1, 3], "nuance": [1, 3], "linkability": "external" },
+          "movers": "a small place of origin raises risk; migration central to the case raises nuance",
+          "example": {
+            "text": "I moved here from a small town in the hills three years ago for the job.",
+            "speaker": "patient",
+            "span": "a small town in the hills",
+            "annotation": { "risk": 2, "rarity": "uncommon", "linkability": "external", "nuance": 2, "verbatim": true, "bundle_ids": [1], "action": "GENERALISE", "gen_level": 2 },
+            "after": "I moved here from another part of the country three years ago for the job.",
+            "rationale": "Escalated to level 2 because this span sits in a bundle with DEM-OCC and DEM-AGE."
+          }
+        },
+        {
+          "code": "DEM-FAM",
+          "name": "Family structure and marital status",
+          "description": "Birth order, joint family configuration, marital status, number of children. Frequently high nuance.",
+          "typical": { "risk": [1, 3], "nuance": [2, 3], "linkability": "internal" },
+          "movers": "countable configurations (youngest of four) raise risk; family conflict as the presenting issue raises nuance",
+          "example": {
+            "text": "I am the youngest of four, and the only one who did not stay in the joint family house.",
+            "speaker": "patient",
+            "span": "the youngest of four, and the only one who did not stay in the joint family house",
+            "annotation": { "risk": 2, "rarity": "uncommon", "linkability": "internal", "nuance": 3, "verbatim": true, "action": "GENERALISE", "gen_level": 1 },
+            "after": "I am the youngest sibling, and the only one who moved out of the joint family house.",
+            "rationale": "Exact sibling count removed; the position and the departure, which carry the clinical meaning, are kept."
+          }
+        },
+        {
+          "code": "DEM-COM",
+          "name": "Caste, community, religion, language group",
+          "description": "Culturally load-bearing. Almost never suppress, because removing it can make the presenting conflict unintelligible.",
+          "typical": { "risk": [1, 3], "nuance": [2, 3], "linkability": "external" },
+          "movers": "a tiny minority in that region raises risk; community pressure driving the case raises nuance",
+          "interview_basis": "Raised explicitly by one clinician as shaping the expected problem set alongside age.",
+          "example": {
+            "text": "The marriage was arranged within the community and refusing was not treated as an option.",
+            "speaker": "patient",
+            "span": "arranged within the community",
+            "annotation": { "risk": 1, "rarity": "common", "linkability": "internal", "nuance": 3, "verbatim": true, "action": "KEEP" },
+            "after": "unchanged",
+            "rationale": "Named community would be GENERALISE. An unnamed reference to community endogamy is common enough to keep, and the coercion dynamic is the clinical content."
+          }
+        },
+        {
+          "code": "DEM-SES",
+          "name": "Socioeconomic markers",
+          "description": "Education level, housing type, income references, employment stability.",
+          "typical": { "risk": [0, 2], "nuance": [1, 3], "linkability": "internal" },
+          "movers": "precise markers raise risk; poverty or aspiration central to the case raises nuance",
+          "example": {
+            "text": "I am the first in my family to finish college.",
+            "speaker": "patient",
+            "span": "first in my family to finish college",
+            "annotation": { "risk": 1, "rarity": "common", "linkability": "internal", "nuance": 3, "verbatim": true, "action": "KEEP" },
+            "after": "unchanged"
+          }
+        },
+        {
+          "code": "DEM-SETTING",
+          "name": "Shared institutional setting",
+          "description": "Hostel, campus, workplace or unit shared with the clinician. Enables dual-relationship identification, which no conventional identifier list covers.",
+          "typical": { "risk": [2, 3], "nuance": [1, 3], "linkability": "internal" },
+          "movers": "shared with the clinician starts high; the dual relationship as the clinical issue raises nuance",
+          "interview_basis": "A clinician described a patient living in the same hostel as her.",
+          "example": {
+            "text": "He was staying in the same hostel block as me, two floors down.",
+            "speaker": "clinician",
+            "span": "same hostel block as me, two floors down",
+            "annotation": { "risk": 3, "rarity": "rare", "linkability": "internal", "nuance": 2, "verbatim": false, "bundle_ids": [2], "action": "GENERALISE", "gen_level": 2 },
+            "after": "He lived in the same residential facility as me.",
+            "rationale": "Floor-level detail suppressed; the dual relationship is retained because it is the clinical issue."
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "NAR",
+      "name": "Narrative signature",
+      "description": "Highest priority class. These are the cues clinicians actually recall a patient by, and they survive every conventional identifier pass untouched.",
+      "sub_codes": [
+        {
+          "code": "NAR-VERB",
+          "name": "Patient-original phrasing",
+          "description": "An idiom, metaphor or coinage the patient invented. The strongest single re-identification vector in the schema, and made worse by the professional convention of recording chief complaint as exact verbatim.",
+          "rewrite_constraints": {
+            "preserve": ["register", "metaphor structure", "emotional intensity"],
+            "require": ["break the exact string", "add nothing - a rewrite must never invent clinical content"],
+            "status": "experiment-gated: the system proposes constrained rewrites; a human commits every one until feasibility is validated on synthetic coinages"
+          },
+          "typical": { "risk": [2, 3], "nuance": [2, 3], "linkability": "internal" },
+          "movers": "frequency-check singularity raises risk; the therapist actively using the phrase raises nuance",
+          "interview_basis": "A clinician recalled a patient's phrase about parents believing themselves infallible, remembered years later for its phrasing rather than its content.",
+          "example": {
+            "text": "My parents think they are gods, they cannot be wrong even once.",
+            "speaker": "patient",
+            "span": "My parents think they are gods",
+            "annotation": { "risk": 3, "rarity": "singular", "linkability": "internal", "nuance": 3, "verbatim": true, "action": "GENERALISE+SUBSTITUTE", "gen_level": 2, "notes": "risk 3 and nuance 3: adjudication required" },
+            "after": "My parents act like they can never be wrong, not even once.",
+            "rationale": "Constrained rewrite. Register, metaphor structure and emotional intensity preserved; the exact string is broken.",
+            "counter_example": "Rewriting to 'my parents were controlling' would be a failure: correct in substance, but it destroys the register and the heat, which is the clinical signal."
+          }
+        },
+        {
+          "code": "NAR-HOOK",
+          "name": "Euphemism inviting a probe",
+          "description": "A code word the patient introduces, often subconsciously, expecting the clinician to follow it.",
+          "typical": { "risk": [1, 3], "nuance": [3, 3], "linkability": "internal" },
+          "movers": "a private code word raises risk; a common cultural construction lowers it; hooks are nearly always nuance 3",
+          "interview_basis": "A clinician described patients saying they are married and have a friend, a construction that on probing almost always discloses an affair.",
+          "example": {
+            "text": "I am married, and I also have a friend.",
+            "speaker": "patient",
+            "span": "I also have a friend",
+            "annotation": { "risk": 1, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": true, "action": "KEEP" },
+            "after": "unchanged",
+            "rationale": "This particular hook is a recurring convention rather than an individual coinage, so it is common and therefore not identifying. It is tagged so the pipeline can distinguish shared hooks from individual coinages, which is exactly the distinction NAR-VERB needs."
+          }
+        },
+        {
+          "code": "NAR-RARE",
+          "name": "Rare event or circumstance",
+          "description": "An event, condition or life circumstance uncommon enough that it identifies by itself. Uniqueness relative to caseload is what makes clinicians remember it.",
+          "rewrite_constraints": {
+            "preserve": ["clinical function of the event", "emotional intensity"],
+            "require": ["break external searchability", "add nothing - a rewrite must never invent clinical content"],
+            "status": "experiment-gated: the system proposes constrained rewrites; a human commits every one until feasibility is validated on synthetic coinages"
+          },
+          "typical": { "risk": [2, 3], "nuance": [1, 3], "linkability": "external" },
+          "movers": "an event famous in a community raises risk sharply; index trauma raises nuance, an incidental event lowers it",
+          "interview_basis": "A clinician recalled a case remembered specifically because the underlying condition was unique in her experience.",
+          "example": {
+            "text": "The whole thing started after the factory fire, when I was the only one who got out of that shift.",
+            "speaker": "patient",
+            "span": "after the factory fire, when I was the only one who got out of that shift",
+            "annotation": { "risk": 3, "rarity": "singular", "linkability": "external", "nuance": 3, "verbatim": true, "action": "GENERALISE+SUBSTITUTE", "gen_level": 3 },
+            "after": "It started after an accident at work, where I was the only survivor among the people around me.",
+            "rationale": "Sole-survivor guilt is the clinical content and must survive. The specific reportable event is removed because it is externally searchable."
+          }
+        },
+        {
+          "code": "NAR-THIRD",
+          "name": "Identifying fragment about a third party",
+          "description": "The detail that pinpoints another person: a name, workplace, school, precise location. Never the relational content itself — that is KEEP-REL; hybrids stack KEEP-REL over the sentence with NAR-THIRD on the fragment. Treatment ranges by the fragment's meaning: nuance 3 function-preserving blur, nuance 2 swap, nuance 0-1 replace with a smoothing bridge. Deleting details never deletes the person — coreference keeps every character in the story. These people did not consent to anything.",
+          "typical": { "risk": [1, 3], "nuance": [0, 3], "linkability": "external" },
+          "movers": "identifying precision about the other person raises risk; case-relevance raises nuance - delete only at nuance 0-1",
+          "example": {
+            "text": "My wife teaches at the girls' school behind the bus depot.",
+            "speaker": "patient",
+            "span": "teaches at the girls' school behind the bus depot",
+            "annotation": { "risk": 3, "rarity": "singular", "linkability": "external", "nuance": 1, "verbatim": true, "action": "SUPPRESS" },
+            "after": "My wife is a teacher."
+          }
+        },
+        {
+          "code": "NAR-TEMP",
+          "name": "Temporal anchor to a public event",
+          "description": "A datable public event used to place the narrative in time.",
+          "typical": { "risk": [1, 3], "nuance": [1, 2], "linkability": "external" },
+          "movers": "newsworthy, datable anchors raise risk; timing-as-cause raises nuance",
+          "example": {
+            "text": "It began during the lockdown, right when the board exams were cancelled.",
+            "speaker": "patient",
+            "span": "during the lockdown, right when the board exams were cancelled",
+            "annotation": { "risk": 2, "rarity": "common", "linkability": "external", "nuance": 2, "verbatim": true, "action": "GENERALISE", "gen_level": 1 },
+            "after": "It began during a period when my exams were disrupted.",
+            "rationale": "The disruption is the clinical content. The datable anchor narrows the cohort and is removed."
+          }
+        },
+        {
+          "code": "NAR-IDIOM",
+          "name": "Cultural idiom of distress",
+          "description": "A culturally specific way of expressing suffering or hopelessness. High nuance, moderate risk. Generalise carefully or the transcript stops sounding like a real person.",
+          "rewrite_constraints": {
+            "preserve": ["register", "cultural framing", "code-mixing where present", "emotional intensity"],
+            "require": ["break the exact string only when the idiom is hyper-local", "add nothing - a rewrite must never invent clinical content"],
+            "status": "experiment-gated: the system proposes constrained rewrites; a human commits every one until feasibility is validated on synthetic coinages"
+          },
+          "typical": { "risk": [0, 2], "nuance": [2, 3], "linkability": "none" },
+          "movers": "a hyper-local idiom raises risk; voice authenticity raises nuance",
+          "interview_basis": "A clinician noted that a resigned, casual remark about medication being pointless stayed with her precisely because of how it was said.",
+          "example": {
+            "text": "Medicine leke bhi kya ho jayega, it is all the same anyway.",
+            "speaker": "patient",
+            "span": "Medicine leke bhi kya ho jayega",
+            "annotation": { "risk": 1, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": true, "action": "KEEP" },
+            "after": "unchanged",
+            "rationale": "Shared cultural idiom, not an individual coinage. Removing it would strip the hopelessness marker and the code-mixing that makes the transcript authentic."
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "NVB",
+      "name": "Paralinguistic and nonverbal",
+      "description": "Near-universal individually and therefore almost never identifying on their own. Annotators should resist marking them as risky. They are tagged because bundle linking needs them to construct bindings.",
+      "sub_codes": [
+        {
+          "code": "NVB-BODY",
+          "name": "Body language",
+          "description": "Fidgeting, arm crossing, gaze aversion, closed posture, looking away.",
+          "marker_capable": true,
+          "typical": { "risk": [0, 1], "nuance": [2, 3], "linkability": "none" },
+          "movers": "alone near-worthless; its value is as a binding ingredient",
+          "interview_basis": "All five clinicians converged on this set.",
+          "example": {
+            "text": "She kept her arms crossed for most of the first half.",
+            "speaker": "clinician",
+            "span": "kept her arms crossed",
+            "annotation": { "risk": 0, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": false, "action": "KEEP" },
+            "after": "unchanged"
+          }
+        },
+        {
+          "code": "NVB-VOICE",
+          "name": "Paralinguistic features",
+          "description": "Volume, pitch, pace, stutter, and change over the session. The trajectory carries more information than the state.",
+          "marker_capable": true,
+          "typical": { "risk": [0, 2], "nuance": [2, 3], "linkability": "none" },
+          "movers": "a highly distinctive described pattern raises risk; change over the session raises nuance",
+          "interview_basis": "A clinician described tracking stutter onset at the start and how it eased as rapport built.",
+          "example": {
+            "text": "He stammered badly for the first ten minutes and then it settled almost completely.",
+            "speaker": "clinician",
+            "span": "stammered badly for the first ten minutes and then it settled",
+            "annotation": { "risk": 1, "rarity": "common", "linkability": "internal", "nuance": 3, "verbatim": false, "action": "KEEP" },
+            "after": "unchanged",
+            "rationale": "A persistent, severe speech characteristic would score higher. A transient anxiety stammer that resolves is common."
+          }
+        },
+        {
+          "code": "NVB-SILENCE",
+          "name": "Meaningful silence",
+          "description": "A pause carrying content, including the silence of realisation.",
+          "marker_capable": true,
+          "typical": { "risk": [0, 0], "nuance": [2, 3], "linkability": "none" },
+          "movers": "never identifying alone",
+          "example": {
+            "text": "She went completely quiet for about half a minute, and then said she had never put it that way before.",
+            "speaker": "clinician",
+            "span": "went completely quiet for about half a minute",
+            "annotation": { "risk": 0, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": false, "action": "KEEP" },
+            "after": "unchanged"
+          }
+        },
+        {
+          "code": "NVB-LANG",
+          "name": "Language switching",
+          "description": "Code-switching: the speaker changes language or slips into their mother tongue mid-conversation. Near-universal in code-mixed speech, and behaves like silence: individually harmless, tagged as raw material for bindings - a switch that clusters at one specific topic is a tell.",
+          "marker_capable": true,
+          "typical": { "risk": [0, 1], "nuance": [2, 3], "linkability": "none" },
+          "movers": "a highly distinctive personal switching pattern raises risk slightly; a switch bound to one topic moves the risk into the NVB-BOUND composite, not this span",
+          "example": {
+            "text": "We discussed the wedding calmly in English, but the moment her mother came up she said, 'Woh samjhengi nahin, doctor. Kabhi nahin.'",
+            "speaker": "clinician",
+            "span": "the moment her mother came up she said, 'Woh samjhengi nahin, doctor. Kabhi nahin.'",
+            "annotation": { "risk": 0, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": true, "action": "KEEP" },
+            "after": "unchanged",
+            "rationale": "Switching to the mother tongue is common and identifies no one. What matters is the pattern: if the switch happens only when the mother is raised, the binding engine fuses switch and topic into an NVB-BOUND composite, and that composite carries the risk."
+          }
+        },
+        {
+          "code": "NVB-BOUND",
+          "name": "Cue-topic binding",
+          "description": "A composite span generated at the bundle-linking stage when a marker-capable cue (any code flagged marker_capable — nonverbal or not: silence, stutter, gaze, deflection, language switch) occurs at a specific topic and not at the session baseline. This is the only NVB code that is usually identifying.",
+          "generated": true,
+          "binding_rule": "bind(marker, topic) iff |pos(marker) - pos(topic)| < window AND P(marker | topic) / P(marker | baseline) > lift_threshold. The parameters (window, lift_threshold) are tunables and live in the policy file (anonymization-policy.json), set per marker type and adjusted from test runs.",
+          "typical": { "risk": [1, 3], "nuance": [2, 3], "linkability": "internal" },
+          "movers": "lift over the session baseline raises risk; what the topic is raises nuance",
+          "example": {
+            "text": "He was fine throughout, but every time his elder brother came up he stopped making eye contact.",
+            "speaker": "clinician",
+            "span": "every time his elder brother came up he stopped making eye contact",
+            "annotation": { "risk": 2, "rarity": "uncommon", "linkability": "internal", "nuance": 3, "verbatim": false, "bundle_ids": [3], "action": "GENERALISE", "gen_level": 1 },
+            "after": "Every time a particular family member came up he stopped making eye contact.",
+            "rationale": "Gaze aversion alone is risk 0. Bound to one named relation it becomes a recognition cue, so the relation is generalised while the binding itself is kept."
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "INT",
+      "name": "Interactional dynamics",
+      "description": "Behaviour during rupture and resistance. The behaviour is generic; what triggered it usually is not.",
+      "sub_codes": [
+        {
+          "code": "INT-RESIST",
+          "name": "Resistance behaviour",
+          "description": "Avoidance, zoning out, deflection to an unrelated topic, direct refusal, stock non-answers, speeding up.",
+          "marker_capable": true,
+          "typical": { "risk": [0, 1], "nuance": [2, 3], "linkability": "none" },
+          "movers": "the behaviour is generic; the trigger (via binding) is where risk hides",
+          "interview_basis": "Two clinicians independently listed avoidance, zoning out, topic shifting, refusal, fidgeting and silence.",
+          "example": {
+            "text": "Every time I asked, the answer was just I don't know, and then he changed the subject.",
+            "speaker": "clinician",
+            "span": "just I don't know, and then he changed the subject",
+            "annotation": { "risk": 0, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": false, "action": "KEEP" },
+            "after": "unchanged"
+          }
+        },
+        {
+          "code": "INT-CONFRONT",
+          "name": "Confrontation or rupture",
+          "description": "An explicit challenge, whether patient or clinician initiated, including confrontation used deliberately as technique.",
+          "typical": { "risk": [0, 2], "nuance": [2, 3], "linkability": "internal" },
+          "movers": "quoted unusual confrontations raise risk; rupture-and-repair raises nuance",
+          "interview_basis": "A clinician described using gentle confrontation to surface a contradiction from a previous session.",
+          "example": {
+            "text": "I said, that isn't quite what you told me last week, is it?",
+            "speaker": "clinician",
+            "span": "that isn't quite what you told me last week, is it?",
+            "annotation": { "risk": 0, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": true, "action": "KEEP" },
+            "after": "unchanged",
+            "rationale": "Clinician technique, high research value, no identifying content."
+          }
+        },
+        {
+          "code": "INT-BOUNDARY",
+          "name": "Boundary incident",
+          "description": "A demand outside the therapeutic frame, a threat, or retaliation following a refusal. High risk because incidents are memorable and often documented elsewhere.",
+          "typical": { "risk": [2, 3], "nuance": [2, 3], "linkability": "internal" },
+          "movers": "incidents documented elsewhere (complaints) raise risk sharply",
+          "interview_basis": "A clinician described a patient demanding an unscheduled session and threatening to retaliate when refused.",
+          "example": {
+            "text": "When I said we would keep to the scheduled time, he told me he would make sure I regretted it.",
+            "speaker": "clinician",
+            "span": "he told me he would make sure I regretted it",
+            "annotation": { "risk": 3, "rarity": "rare", "linkability": "internal", "nuance": 3, "verbatim": false, "bundle_ids": [2], "action": "GENERALISE", "gen_level": 2 },
+            "after": "When I held to the scheduled time, he responded with a threat.",
+            "rationale": "The dynamic is retained. Specific wording removed because an incident of this kind is likely recorded elsewhere and therefore cross-linkable."
+          }
+        },
+        {
+          "code": "INT-DUAL",
+          "name": "Dual relationship",
+          "description": "Clinician and patient share a social or institutional context outside the session. Pairs with DEM-SETTING in a bundle.",
+          "typical": { "risk": [1, 3], "nuance": [2, 3], "linkability": "internal" },
+          "movers": "specificity of the shared context raises risk; usually the clinical issue itself, so nuance 3",
+          "example": {
+            "text": "I knew him socially before he ever became a patient, which made all of this harder.",
+            "speaker": "clinician",
+            "span": "knew him socially before he ever became a patient",
+            "annotation": { "risk": 2, "rarity": "uncommon", "linkability": "internal", "nuance": 3, "verbatim": false, "bundle_ids": [2], "action": "KEEP" },
+            "after": "unchanged",
+            "rationale": "Kept because the dual relationship is the clinical issue. Risk is carried by the paired DEM-SETTING span, which is generalised instead."
+          }
+        },
+        {
+          "code": "INT-TURN",
+          "name": "Turning point",
+          "description": "The moment the clinician still pictures clearly. Clinician-recall salience is a usable proxy for distinctiveness.",
+          "typical": { "risk": [0, 2], "nuance": [3, 3], "linkability": "internal" },
+          "movers": "memorable is not identifying, unless the moment involves a rare event",
+          "example": {
+            "text": "The moment everything changed was when he finally looked up and said he had never told anyone.",
+            "speaker": "clinician",
+            "span": "finally looked up and said he had never told anyone",
+            "annotation": { "risk": 1, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": false, "action": "KEEP" },
+            "after": "unchanged",
+            "rationale": "Salient to the clinician but not distinctive across patients. Risk rises only if the disclosure content itself is rare."
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "CLI",
+      "name": "Clinician-side signals",
+      "description": "These identify the therapist, not only the patient. A corpus that protects patients while exposing clinician behaviour to their employer has traded one privacy problem for another. Expect low yield from interviews, since clinicians asked about their own bias answer with protocol rather than incident.",
+      "sub_codes": [
+        {
+          "code": "CLI-CT",
+          "name": "Countertransference marker",
+          "description": "Evaluative adjectives, unusual warmth or distance, moralising, or a register shift specific to one patient.",
+          "typical": { "risk": [1, 3], "nuance": [2, 3], "linkability": "internal" },
+          "movers": "institutional readership raises risk - third-lever territory",
+          "example": {
+            "text": "Honestly this one was just an entitled kid, and I could feel myself getting short with him.",
+            "speaker": "clinician",
+            "span": "just an entitled kid, and I could feel myself getting short with him",
+            "annotation": { "risk": 2, "rarity": "uncommon", "linkability": "internal", "nuance": 3, "verbatim": true, "action": "KEEP", "notes": "flag for clinician-consent tier rather than transform" },
+            "after": "unchanged in the research tier; withheld from any release visible to the clinician's employer",
+            "rationale": "Transforming this destroys the phenomenon the class exists to study. The correct control is access, not rewriting."
+          }
+        },
+        {
+          "code": "CLI-SELF",
+          "name": "Clinician self-disclosure",
+          "description": "The clinician offering information about their own life or reactions.",
+          "typical": { "risk": [1, 3], "nuance": [1, 3], "linkability": "external" },
+          "movers": "specific biography raises risk; disclosure-as-technique raises nuance",
+          "example": {
+            "text": "I told her I had been through something similar during my own training years.",
+            "speaker": "clinician",
+            "span": "I had been through something similar during my own training years",
+            "annotation": { "risk": 2, "rarity": "uncommon", "linkability": "external", "nuance": 3, "verbatim": false, "action": "GENERALISE", "gen_level": 1 },
+            "after": "I told her I had been through something similar myself."
+          }
+        },
+        {
+          "code": "CLI-SUPER",
+          "name": "Supervision or referral reference",
+          "description": "Mention of supervision, a named colleague, or an onward referral decision.",
+          "typical": { "risk": [1, 3], "nuance": [1, 2], "linkability": "external" },
+          "movers": "named colleagues or units raise risk",
+          "interview_basis": "Clinicians described referring cases outside their specialisation to a better-suited colleague.",
+          "example": {
+            "text": "I felt this was outside what I handle, so I passed it to the OCD clinic upstairs.",
+            "speaker": "clinician",
+            "span": "the OCD clinic upstairs",
+            "annotation": { "risk": 2, "rarity": "uncommon", "linkability": "external", "nuance": 2, "verbatim": false, "action": "GENERALISE", "gen_level": 1 },
+            "after": "I felt this was outside what I handle, so I referred it to a specialist service."
+          }
+        },
+        {
+          "code": "CLI-HUMOUR",
+          "name": "Humour or informal register as technique",
+          "description": "Deliberate informality used to open a patient up.",
+          "typical": { "risk": [0, 2], "nuance": [2, 3], "linkability": "internal" },
+          "movers": "quoted running jokes raise risk slightly; technique value raises nuance",
+          "interview_basis": "One clinician described humour as her main tool for getting patients to open up.",
+          "example": {
+            "text": "I laughed and said we would both pretend I hadn't noticed that.",
+            "speaker": "clinician",
+            "span": "we would both pretend I hadn't noticed that",
+            "annotation": { "risk": 1, "rarity": "common", "linkability": "internal", "nuance": 3, "verbatim": true, "action": "KEEP" },
+            "after": "unchanged",
+            "rationale": "A distinctive personal style is a clinician fingerprint, but it is also the procedural knowledge research most wants. Handle by access tier, not transformation."
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "KEEP",
+      "name": "Preserve class",
+      "description": "The negative class. Annotated as diligently as the risky classes, because a model trained only on positive spans learns to over-redact.",
+      "default_action": "KEEP",
+      "sub_codes": [
+        {
+          "code": "KEEP-SYMPT",
+          "name": "Symptom description",
+          "description": "Symptom content with no identifying specificity.",
+          "typical": { "risk": [0, 0], "nuance": [2, 3], "linkability": "none" },
+          "movers": "risk above 0 means the label is wrong - re-code, do not treat",
+          "example": {
+            "text": "I have no energy for anything, and nothing feels interesting any more.",
+            "speaker": "patient",
+            "span": "no energy for anything, and nothing feels interesting any more",
+            "annotation": { "risk": 0, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": true, "action": "KEEP" },
+            "after": "unchanged"
+          }
+        },
+        {
+          "code": "KEEP-AFFECT",
+          "name": "Affect trajectory",
+          "description": "How affect moves across the session.",
+          "typical": { "risk": [0, 0], "nuance": [2, 3], "linkability": "none" },
+          "movers": "risk above 0 means the label is wrong - re-code, do not treat",
+          "example": {
+            "text": "She started guarded and by the end was answering in full paragraphs.",
+            "speaker": "clinician",
+            "span": "started guarded and by the end was answering in full paragraphs",
+            "annotation": { "risk": 0, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": false, "action": "KEEP" },
+            "after": "unchanged"
+          }
+        },
+        {
+          "code": "KEEP-TECH",
+          "name": "Therapeutic move",
+          "description": "Reflection, reframe, deliberate silence, offering a tissue or water, permission to defer a question. The procedural knowledge most downstream research wants.",
+          "typical": { "risk": [0, 0], "nuance": [2, 3], "linkability": "none" },
+          "movers": "risk above 0 means the label is wrong - re-code, do not treat",
+          "interview_basis": "Multiple clinicians described the same de-escalation sequence: offer a tissue, hold the silence, invite them to continue when ready.",
+          "example": {
+            "text": "I offered her a tissue, sat with the silence, and told her we could pick it up whenever she was ready.",
+            "speaker": "clinician",
+            "span": "offered her a tissue, sat with the silence, and told her we could pick it up whenever she was ready",
+            "annotation": { "risk": 0, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": false, "action": "KEEP" },
+            "after": "unchanged"
+          }
+        },
+        {
+          "code": "KEEP-CULT",
+          "name": "Cultural or religious content",
+          "description": "Cultural or religious material with no linkage value.",
+          "typical": { "risk": [0, 0], "nuance": [2, 3], "linkability": "none" },
+          "movers": "risk above 0 means the label is wrong - re-code, do not treat",
+          "example": {
+            "text": "I still do the morning prayer, it is the only part of the day that feels steady.",
+            "speaker": "patient",
+            "span": "I still do the morning prayer, it is the only part of the day that feels steady",
+            "annotation": { "risk": 0, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": true, "action": "KEEP" },
+            "after": "unchanged"
+          }
+        },
+        {
+          "code": "KEEP-REL",
+          "name": "Relational dynamic",
+          "description": "What the people around the speaker do to or with them — conflict, support, pressure, neglect — with no identifying specificity. The cargo layer of third-party content; any identifying fragment riding inside it is stacked as a secondary NAR-THIRD span and treated on its own.",
+          "typical": { "risk": [0, 0], "nuance": [2, 3], "linkability": "none" },
+          "movers": "risk above 0 means the label is wrong; identifying fragments stack a secondary NAR-THIRD",
+          "example": {
+            "text": "My wife shouts at me regularly, for anything, in front of the children.",
+            "speaker": "patient",
+            "span": "shouts at me regularly, for anything, in front of the children",
+            "annotation": { "risk": 0, "rarity": "common", "linkability": "none", "nuance": 3, "verbatim": true, "action": "KEEP" },
+            "after": "unchanged",
+            "rationale": "Relational conflict is the presenting problem; nothing here identifies the wife. If an identifying fragment were present — her name, her workplace — it would be stacked as a secondary NAR-THIRD span and treated on its own. The person never leaves the story."
+          }
+        }
+      ]
+    }
+  ],
+
+  "generalisation_hierarchies": {
+    "_note": "These chains are few-shot exemplars showing how WE do generalisation: small steps, minimum rungs, meaning preserved. They are not lookup tables. Generalisations are generated per instance, guided by these exemplars, and every candidate passes the standard gates (meaning floor, risk re-check). A new chain is authored only when test runs show a class generalising badly.",
+    "DEM-OCC": {
+      "example_chain": [
+        "a junior commissioned officer posted at a high-altitude border station",
+        "a non-commissioned officer at a remote posting",
+        "a serving soldier in a demanding posting",
+        "a person in a disciplined uniformed profession"
+      ],
+      "guidance": "Climb the minimum number of levels that brings the bundle k_hat above the tier threshold, and no further. Level 1 usually preserves everything clinically relevant."
+    },
+    "DEM-AGE": {
+      "example_chain": ["twenty-two", "early twenties", "young adult", "adult"]
+    },
+    "DEM-GEO": {
+      "example_chain": ["a small town in the hills", "a smaller town in another state", "another part of the country", "elsewhere"]
+    }
+  },
+
+  "bundle_examples": [
+    {
+      "bundle_id": 1,
+      "member_spans": ["DEM-AGE example", "DEM-OCC example", "DEM-GEO example"],
+      "binding_type": "demographic",
+      "k_hat": 6.2,
+      "bundle_risk": 3,
+      "rationale": "Age band plus a specific posting type plus region of origin. Each span alone scores 1 to 2. Together they narrow the population to single digits, which is the failure mode a per-span scorer misses entirely."
+    },
+    {
+      "bundle_id": 2,
+      "member_spans": ["DEM-SETTING example", "INT-DUAL example", "INT-BOUNDARY example"],
+      "binding_type": "relational",
+      "k_hat": 3.0,
+      "bundle_risk": 3,
+      "rationale": "A shared residential setting plus a documented boundary incident. Anyone in that institution at that time could identify both parties."
+    },
+    {
+      "bundle_id": 3,
+      "member_spans": ["NVB-BODY instance", "topic span: elder brother"],
+      "binding_type": "cue_topic",
+      "k_hat": 45.0,
+      "bundle_risk": 2,
+      "rationale": "Gaze aversion is universal. Gaze aversion occurring only at one named relation is a recognition cue for anyone who knows the family."
+    }
+  ],
+
+  "annotator_rules": [
+    "Read the whole transcript before annotating anything. Bundle risk cannot be judged utterance by utterance.",
+    "Tag the KEEP class as diligently as the risky classes.",
+    "Unsure between risk 2 and risk 3? Ask whether someone who already knows this patient could recognise them from this span alone. If yes, it is 3.",
+    "Unsure about nuance? Ask whether the clinical story still makes sense to a supervisor with the span deleted. If not, it is 3.",
+    "Do not resolve the action yourself when risk and nuance are both 3. Flag it for adjudication.",
+    "Never assign SUPPRESS to a span with nuance 2 or 3. SUPPRESS is permitted only at nuance 0 or 1. Anything above that is a system error, not a judgement call."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": "metric-redteam-v1",
+  "seed": 42,
+  "source_cases": 28,
+  "jobs": 112,
+  "splits": {
+    "development": 14,
+    "holdout": 14
+  },
+  "authoring": "Codex-assisted single-author source/perturbation drafting before scoring; not independently clinician adjudicated",
+  "threshold_selection": "development only; maximize balanced accuracy, ties nearest 0.5 then lowest threshold",
+  "ci": "case-cluster bootstrap 2000 samples seed42",
+  "privacy": "declared literal and semantic specificity only; no real-person attack",
+  "models": [
+    "Gemma 4 31B IT frozen offline rubric",
+    "bert-base-uncased layer9 BERTScore F1",
+    "cross-encoder/nli-deberta-v3-base entailment"
+  ],
+  "files": {
+    "judge_inputs.json": "d11d90e3c2f14d143f154b764a11f576c1b41110e4d52a90a65c8d1f4a07edb3",
+    "probes.json": "56d7a00370468da3ad37542a43d2e08816b76f2ac66243b46acc6072bd91f507",
+    "truth.json": "1d024c8384b4856758ae1b861a0e2f9f088f1fd1f281275fb1dbf6c3f0b9552a"
+  }
+}

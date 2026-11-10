@@ -1,0 +1,6 @@
+pytest
+rouge-score==0.1.2
+bert-score==0.3.13
+scipy==1.15.3
+matplotlib
+# torch/transformers versions and checkpoint hashes are recorded in results/.

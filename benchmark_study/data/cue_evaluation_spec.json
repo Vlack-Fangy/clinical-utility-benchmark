@@ -1,0 +1,1608 @@
+{
+  "taxonomy_sha256": "6c1ea04b73bda26a3718c031a44bde4451f4ca564a4cb71658765d8b71130239",
+  "status": "provisional evaluation overlay; not clinician validated",
+  "cues": [
+    {
+      "code": "DIR-NAME",
+      "name": "Personal name",
+      "group": "DIR",
+      "definition": "Name of the patient, a relative, or any other individual.",
+      "generated": false,
+      "privacy_significance": "identity lookup",
+      "clinical_significance": "actor continuity",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "real full/partial names",
+      "must_preserve": "consistent distinct actors and roles",
+      "confusable_codes": [
+        "NAR-THIRD",
+        "KEEP-REL"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Personal name. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about actor continuity? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "DIR-GEO",
+      "name": "Geography below state level",
+      "group": "DIR",
+      "definition": "Address, locality, town, postal code.",
+      "generated": false,
+      "privacy_significance": "location linkage",
+      "clinical_significance": "spatial exposure and access",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "street, village, city and uniquely locating institution",
+      "must_preserve": "supported terrain, distance, migration and exposure relations",
+      "confusable_codes": [
+        "DEM-GEO",
+        "DEM-SETTING"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Geography below state level. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about spatial exposure and access? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "DIR-DATE",
+      "name": "Date finer than year",
+      "group": "DIR",
+      "definition": "Date of birth, admission date, exact event date.",
+      "generated": false,
+      "privacy_significance": "event/date linkage",
+      "clinical_significance": "chronology and treatment intervals",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "unnecessary exact calendar date",
+      "must_preserve": "order, duration, age at event and treatment timing",
+      "confusable_codes": [
+        "NAR-TEMP",
+        "DEM-AGE"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Date finer than year. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about chronology and treatment intervals? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "DIR-CONTACT",
+      "name": "Contact details",
+      "group": "DIR",
+      "definition": "Phone number, email, social handle.",
+      "generated": false,
+      "privacy_significance": "direct contact linkage",
+      "clinical_significance": "contact availability",
+      "default_role": "privacy-only",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "email, telephone, URL and address",
+      "must_preserve": "whether contact or support was available",
+      "confusable_codes": [
+        "DIR-ID",
+        "DIR-GEO"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Contact details. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about contact availability? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "DIR-ID",
+      "name": "Account or record number",
+      "group": "DIR",
+      "definition": "Chart number, insurance number, government identifier, employee code.",
+      "generated": false,
+      "privacy_significance": "record/account lookup",
+      "clinical_significance": "record or treatment reference role",
+      "default_role": "privacy-only",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "unique account or record string",
+      "must_preserve": "type and relationship of referenced record",
+      "confusable_codes": [
+        "DIR-CONTACT",
+        "DIR-DATE"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Account or record number. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about record or treatment reference role? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "APP-GROOM",
+      "name": "Grooming or dress deviation",
+      "group": "APP",
+      "definition": "Dress or grooming departing from an implied norm. Note that the information sits in the comparison, not the observation, so simple redaction does not remove it.",
+      "generated": false,
+      "privacy_significance": "recognizable presentation pattern",
+      "clinical_significance": "self-care change",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "unique identifying dress details",
+      "must_preserve": "source-observed change from baseline and self-care difficulty",
+      "confusable_codes": [
+        "APP-CTX",
+        "KEEP-SYMPT"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "explicit textual report only; acoustic/visual verification not evaluated",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Grooming or dress deviation. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about self-care change? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "APP-CTX",
+      "name": "Attire atypical for the setting",
+      "group": "APP",
+      "definition": "Uniform, occupational dress, religious dress, or anything unusual enough to prompt a question.",
+      "generated": false,
+      "privacy_significance": "distinctive contextual attire",
+      "clinical_significance": "mismatch to setting",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "identifying insignia and institution",
+      "must_preserve": "setting mismatch without inferred diagnosis",
+      "confusable_codes": [
+        "APP-GROOM",
+        "DEM-OCC"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "explicit textual report only; acoustic/visual verification not evaluated",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Attire atypical for the setting. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about mismatch to setting? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "APP-PHYS",
+      "name": "Distinguishing physical feature",
+      "group": "APP",
+      "definition": "Scar, visible disability, unusual build, distinctive marking.",
+      "generated": false,
+      "privacy_significance": "recognizable physical feature",
+      "clinical_significance": "injury, disability or functioning",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "unique cosmetic description when unnecessary",
+      "must_preserve": "functional limitation and supported symptom relation",
+      "confusable_codes": [
+        "APP-GROOM",
+        "KEEP-SYMPT"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "explicit textual report only; acoustic/visual verification not evaluated",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Distinguishing physical feature. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about injury, disability or functioning? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "APP-AFFECT",
+      "name": "Observable affect at presentation",
+      "group": "APP",
+      "definition": "Crying, shivering, visible anxiety at first contact.",
+      "generated": false,
+      "privacy_significance": "distinctive affect combination",
+      "clinical_significance": "observed affect state",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "only distinctive identifying combinations",
+      "must_preserve": "observed affect without inferred intent",
+      "confusable_codes": [
+        "KEEP-AFFECT",
+        "NVB-BODY"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "explicit textual report only; acoustic/visual verification not evaluated",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Observable affect at presentation. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about observed affect state? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "DEM-AGE",
+      "name": "Age",
+      "group": "DEM",
+      "definition": "Stated or inferred age. Clinicians use age to predict a typical presenting problem set, which is exactly the inference an attacker can also run.",
+      "generated": false,
+      "privacy_significance": "age-based linkage",
+      "clinical_significance": "developmental stage",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "unnecessary exact age",
+      "must_preserve": "life stage and clinically necessary age relation",
+      "confusable_codes": [
+        "DIR-DATE",
+        "DEM-FAM"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Age. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about developmental stage? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "DEM-OCC",
+      "name": "Occupation, rank, employer, institution",
+      "group": "DEM",
+      "definition": "The archetypal contextual identifier. Profession-linked bearing, vocabulary and institutional references survive name removal completely.",
+      "generated": false,
+      "privacy_significance": "rare occupation or employer linkage",
+      "clinical_significance": "workload, hierarchy and exposure",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "named employer, exact rare rank or unique job",
+      "must_preserve": "night work, exposure, isolation and hierarchy when supported",
+      "confusable_codes": [
+        "DEM-SETTING",
+        "NAR-RARE"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Occupation, rank, employer, institution. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about workload, hierarchy and exposure? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "DEM-GEO",
+      "name": "Origin, residence, migration history",
+      "group": "DEM",
+      "definition": "Highest external linkability of any class in the schema.",
+      "generated": false,
+      "privacy_significance": "origin/residence linkage",
+      "clinical_significance": "migration, regional discrimination and access",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "identifying location precision",
+      "must_preserve": "supported regional properties and discrimination, not inferred ethnicity",
+      "confusable_codes": [
+        "DIR-GEO",
+        "DEM-COM"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Origin, residence, migration history. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about migration, regional discrimination and access? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "DEM-FAM",
+      "name": "Family structure and marital status",
+      "group": "DEM",
+      "definition": "Birth order, joint family configuration, marital status, number of children. Frequently high nuance.",
+      "generated": false,
+      "privacy_significance": "rare household configuration",
+      "clinical_significance": "support, caregiving and conflict",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "unnecessary exact counts or unique family configuration",
+      "must_preserve": "actor roles and clinically relevant relationships",
+      "confusable_codes": [
+        "KEEP-REL",
+        "NAR-THIRD"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Family structure and marital status. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about support, caregiving and conflict? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "DEM-COM",
+      "name": "Caste, community, religion, language group",
+      "group": "DEM",
+      "definition": "Culturally load-bearing. Almost never suppress, because removing it can make the presenting conflict unintelligible.",
+      "generated": false,
+      "privacy_significance": "community affiliation linkage",
+      "clinical_significance": "identity, discrimination and social context",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "unnecessary small-group specificity",
+      "must_preserve": "reported experience and culturally relevant meaning",
+      "confusable_codes": [
+        "KEEP-CULT",
+        "NVB-LANG"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Caste, community, religion, language group. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about identity, discrimination and social context? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "DEM-SES",
+      "name": "Socioeconomic markers",
+      "group": "DEM",
+      "definition": "Education level, housing type, income references, employment stability.",
+      "generated": false,
+      "privacy_significance": "income/property combination",
+      "clinical_significance": "material stress and access",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "exact identifying assets or income",
+      "must_preserve": "deprivation, insecurity and care barriers",
+      "confusable_codes": [
+        "DEM-OCC",
+        "DEM-FAM"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Socioeconomic markers. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about material stress and access? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "DEM-SETTING",
+      "name": "Shared institutional setting",
+      "group": "DEM",
+      "definition": "Hostel, campus, workplace or unit shared with the clinician. Enables dual-relationship identification, which no conventional identifier list covers.",
+      "generated": false,
+      "privacy_significance": "shared institutional insider recognition",
+      "clinical_significance": "care setting and access",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "named institution and exact unit",
+      "must_preserve": "institution type and clinically relevant constraints",
+      "confusable_codes": [
+        "DEM-OCC",
+        "DIR-GEO"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Shared institutional setting. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about care setting and access? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "NAR-VERB",
+      "name": "Patient-original phrasing",
+      "group": "NAR",
+      "definition": "An idiom, metaphor or coinage the patient invented. The strongest single re-identification vector in the schema, and made worse by the professional convention of recording chief complaint as exact verbatim.",
+      "generated": false,
+      "privacy_significance": "searchable unique phrasing",
+      "clinical_significance": "patient conceptual framing",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "unique surface wording if safely paraphrasable",
+      "must_preserve": "literal versus figurative meaning and attribution",
+      "confusable_codes": [
+        "NAR-IDIOM",
+        "NAR-HOOK"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Patient-original phrasing. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about patient conceptual framing? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "NAR-HOOK",
+      "name": "Euphemism inviting a probe",
+      "group": "NAR",
+      "definition": "A code word the patient introduces, often subconsciously, expecting the clinician to follow it.",
+      "generated": false,
+      "privacy_significance": "recognizable euphemism",
+      "clinical_significance": "ambiguous clinically relevant reference",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "identifying wording where supported alternatives exist",
+      "must_preserve": "ambiguity; never resolve unstated referent",
+      "confusable_codes": [
+        "NAR-VERB",
+        "KEEP-SYMPT"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Euphemism inviting a probe. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about ambiguous clinically relevant reference? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "NAR-RARE",
+      "name": "Rare event or circumstance",
+      "group": "NAR",
+      "definition": "An event, condition or life circumstance uncommon enough that it identifies by itself. Uniqueness relative to caseload is what makes clinicians remember it.",
+      "generated": false,
+      "privacy_significance": "rare event linkage",
+      "clinical_significance": "trauma and clinically significant event",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "identifying event circumstances unnecessary for understanding",
+      "must_preserve": "event actors, actions, order and uncertainty",
+      "confusable_codes": [
+        "NAR-TEMP",
+        "KEEP-REL"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Rare event or circumstance. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about trauma and clinically significant event? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "NAR-THIRD",
+      "name": "Identifying fragment about a third party",
+      "group": "NAR",
+      "definition": "The detail that pinpoints another person: a name, workplace, school, precise location. Never the relational content itself — that is KEEP-REL; hybrids stack KEEP-REL over the sentence with NAR-THIRD on the fragment. Treatment ranges by the fragment's meaning: nuance 3 function-preserving blur, nuance 2 swap, nuance 0-1 replace with a smoothing bridge. Deleting details never deletes the person — coreference keeps every character in the story. These people did not consent to anything.",
+      "generated": false,
+      "privacy_significance": "third-party identity linkage",
+      "clinical_significance": "abuse, support and family history",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "third-party names and unique biography",
+      "must_preserve": "who acted on whom and reported versus observed evidence",
+      "confusable_codes": [
+        "DIR-NAME",
+        "DEM-FAM"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Identifying fragment about a third party. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about abuse, support and family history? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "NAR-TEMP",
+      "name": "Temporal anchor to a public event",
+      "group": "NAR",
+      "definition": "A datable public event used to place the narrative in time.",
+      "generated": false,
+      "privacy_significance": "public event/time linkage",
+      "clinical_significance": "sequence and trigger context",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "identifying event name and date precision",
+      "must_preserve": "relative ordering and supported temporal association",
+      "confusable_codes": [
+        "DIR-DATE",
+        "NAR-RARE"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Temporal anchor to a public event. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about sequence and trigger context? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "NAR-IDIOM",
+      "name": "Cultural idiom of distress",
+      "group": "NAR",
+      "definition": "A culturally specific way of expressing suffering or hopelessness. High nuance, moderate risk. Generalise carefully or the transcript stops sounding like a real person.",
+      "generated": false,
+      "privacy_significance": "unusual culturally situated phrase",
+      "clinical_significance": "idiom of distress",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "uniquely identifying wording if replaceable",
+      "must_preserve": "cultural meaning without literalizing metaphor",
+      "confusable_codes": [
+        "NAR-VERB",
+        "KEEP-CULT"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Cultural idiom of distress. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about idiom of distress? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "NVB-BODY",
+      "name": "Body language",
+      "group": "NVB",
+      "definition": "Fidgeting, arm crossing, gaze aversion, closed posture, looking away.",
+      "generated": false,
+      "privacy_significance": "distinctive repeated pattern only",
+      "clinical_significance": "observed posture and movement",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "only identifying pattern specificity",
+      "must_preserve": "documented observation, not inferred emotion",
+      "confusable_codes": [
+        "APP-AFFECT",
+        "NVB-BOUND"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "explicit textual report only; acoustic/visual verification not evaluated",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Body language. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about observed posture and movement? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "NVB-VOICE",
+      "name": "Paralinguistic features",
+      "group": "NVB",
+      "definition": "Volume, pitch, pace, stutter, and change over the session. The trajectory carries more information than the state.",
+      "generated": false,
+      "privacy_significance": "distinctive voice pattern",
+      "clinical_significance": "pace and speech trajectory",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "identifying acoustic signature",
+      "must_preserve": "documented pace/volume changes without new duration",
+      "confusable_codes": [
+        "NVB-BODY",
+        "NVB-BOUND"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "explicit textual report only; acoustic/visual verification not evaluated",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Paralinguistic features. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about pace and speech trajectory? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "NVB-SILENCE",
+      "name": "Meaningful silence",
+      "group": "NVB",
+      "definition": "A pause carrying content, including the silence of realisation.",
+      "generated": false,
+      "privacy_significance": "no standalone identity risk",
+      "clinical_significance": "textual pause or observed gap",
+      "default_role": "utility-only",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "no default removal",
+      "must_preserve": "text pause and epistemic status; no acoustic or causal inference",
+      "confusable_codes": [
+        "NVB-BOUND",
+        "INT-RESIST"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "explicit textual report only; acoustic/visual verification not evaluated",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Meaningful silence. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about textual pause or observed gap? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "NVB-LANG",
+      "name": "Language switching",
+      "group": "NVB",
+      "definition": "Code-switching: the speaker changes language or slips into their mother tongue mid-conversation. Near-universal in code-mixed speech, and behaves like silence: individually harmless, tagged as raw material for bindings - a switch that clusters at one specific topic is a tell.",
+      "generated": false,
+      "privacy_significance": "distinctive switching combination",
+      "clinical_significance": "language choice and narrative expression",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "only uniquely identifying repeated association",
+      "must_preserve": "source language and meaning, not inferred ethnicity",
+      "confusable_codes": [
+        "DEM-COM",
+        "NVB-BOUND"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Language switching. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about language choice and narrative expression? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "NVB-BOUND",
+      "name": "Cue-topic binding",
+      "group": "NVB",
+      "definition": "A composite span generated at the bundle-linking stage when a marker-capable cue (any code flagged marker_capable — nonverbal or not: silence, stutter, gaze, deflection, language switch) occurs at a specific topic and not at the session baseline. This is the only NVB code that is usually identifying.",
+      "generated": true,
+      "privacy_significance": "topic-pattern insider recognition",
+      "clinical_significance": "explicit cue/topic association",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "identifying conjunction specificity",
+      "must_preserve": "source-supported association without invented causality",
+      "confusable_codes": [
+        "NVB-BODY",
+        "NVB-VOICE",
+        "NVB-SILENCE",
+        "NVB-LANG"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Cue-topic binding. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about explicit cue/topic association? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "INT-RESIST",
+      "name": "Resistance behaviour",
+      "group": "INT",
+      "definition": "Avoidance, zoning out, deflection to an unrelated topic, direct refusal, stock non-answers, speeding up.",
+      "generated": false,
+      "privacy_significance": "recognizable interaction pattern",
+      "clinical_significance": "engagement or reluctance",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "identifying pattern specifics only",
+      "must_preserve": "observable refusal/hesitation, not inferred motive",
+      "confusable_codes": [
+        "NVB-SILENCE",
+        "INT-CONFRONT"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Resistance behaviour. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about engagement or reluctance? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "INT-CONFRONT",
+      "name": "Confrontation or rupture",
+      "group": "INT",
+      "definition": "An explicit challenge, whether patient or clinician initiated, including confrontation used deliberately as technique.",
+      "generated": false,
+      "privacy_significance": "distinctive encounter linkage",
+      "clinical_significance": "therapeutic rupture",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "unique identifiers in encounter",
+      "must_preserve": "participants, rupture and subsequent response",
+      "confusable_codes": [
+        "INT-RESIST",
+        "KEEP-REL"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Confrontation or rupture. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about therapeutic rupture? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "INT-BOUNDARY",
+      "name": "Boundary incident",
+      "group": "INT",
+      "definition": "A demand outside the therapeutic frame, a threat, or retaliation following a refusal. High risk because incidents are memorable and often documented elsewhere.",
+      "generated": false,
+      "privacy_significance": "unique boundary incident",
+      "clinical_significance": "boundary management",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "identifying incident details not needed for meaning",
+      "must_preserve": "action, consent, boundary and response",
+      "confusable_codes": [
+        "INT-DUAL",
+        "KEEP-REL"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Boundary incident. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about boundary management? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "INT-DUAL",
+      "name": "Dual relationship",
+      "group": "INT",
+      "definition": "Clinician and patient share a social or institutional context outside the session. Pairs with DEM-SETTING in a bundle.",
+      "generated": false,
+      "privacy_significance": "shared-role identity linkage",
+      "clinical_significance": "dual-role conflict",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "named institutions and unique role combination",
+      "must_preserve": "existence and clinical relevance of dual relationship",
+      "confusable_codes": [
+        "DEM-OCC",
+        "CLI-SELF"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Dual relationship. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about dual-role conflict? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "INT-TURN",
+      "name": "Turning point",
+      "group": "INT",
+      "definition": "The moment the clinician still pictures clearly. Clinician-recall salience is a usable proxy for distinctiveness.",
+      "generated": false,
+      "privacy_significance": "recognizable turning event",
+      "clinical_significance": "change in therapeutic trajectory",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "identifying event specifics only",
+      "must_preserve": "before/after state and source uncertainty",
+      "confusable_codes": [
+        "KEEP-AFFECT",
+        "KEEP-TECH"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Turning point. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about change in therapeutic trajectory? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "CLI-CT",
+      "name": "Countertransference marker",
+      "group": "CLI",
+      "definition": "Evaluative adjectives, unusual warmth or distance, moralising, or a register shift specific to one patient.",
+      "generated": false,
+      "privacy_significance": "clinician-pattern recognition",
+      "clinical_significance": "clinician reported reaction",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "unique clinician biography",
+      "must_preserve": "clinician attribution, not patient symptom",
+      "confusable_codes": [
+        "CLI-SELF",
+        "APP-AFFECT"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Countertransference marker. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about clinician reported reaction? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "CLI-SELF",
+      "name": "Clinician self-disclosure",
+      "group": "CLI",
+      "definition": "The clinician offering information about their own life or reactions.",
+      "generated": false,
+      "privacy_significance": "clinician self-identification",
+      "clinical_significance": "therapeutic self-disclosure",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "clinician names and unique biography",
+      "must_preserve": "role and function of disclosure",
+      "confusable_codes": [
+        "NAR-THIRD",
+        "INT-DUAL"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Clinician self-disclosure. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about therapeutic self-disclosure? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "CLI-SUPER",
+      "name": "Supervision or referral reference",
+      "group": "CLI",
+      "definition": "Mention of supervision, a named colleague, or an onward referral decision.",
+      "generated": false,
+      "privacy_significance": "network/institution linkage",
+      "clinical_significance": "supervision or referral pathway",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "names and exact referral institution",
+      "must_preserve": "reason, level of care and sequence",
+      "confusable_codes": [
+        "DEM-SETTING",
+        "KEEP-TECH"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Supervision or referral reference. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about supervision or referral pathway? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "CLI-HUMOUR",
+      "name": "Humour or informal register as technique",
+      "group": "CLI",
+      "definition": "Deliberate informality used to open a patient up.",
+      "generated": false,
+      "privacy_significance": "recognizable clinician style",
+      "clinical_significance": "humour as therapeutic action",
+      "default_role": "dual-role",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "unique wording if identifying",
+      "must_preserve": "speaker, intent only if stated, patient response",
+      "confusable_codes": [
+        "NAR-VERB",
+        "KEEP-TECH"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Humour or informal register as technique. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about humour as therapeutic action? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "KEEP-SYMPT",
+      "name": "Symptom description",
+      "group": "KEEP",
+      "definition": "Symptom content with no identifying specificity.",
+      "generated": false,
+      "privacy_significance": "possible rare-condition linkage, separately annotate",
+      "clinical_significance": "symptom, dose, severity, negation and uncertainty",
+      "default_role": "utility-only",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "no default removal; separate identifying span only",
+      "must_preserve": "symptom, treatment, temporal, numeric and polarity facts",
+      "confusable_codes": [
+        "APP-PHYS",
+        "KEEP-AFFECT"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Symptom description. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about symptom, dose, severity, negation and uncertainty? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "KEEP-AFFECT",
+      "name": "Affect trajectory",
+      "group": "KEEP",
+      "definition": "How affect moves across the session.",
+      "generated": false,
+      "privacy_significance": "possible distinctive trajectory combination",
+      "clinical_significance": "affect evolution",
+      "default_role": "utility-only",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "no default removal",
+      "must_preserve": "direction, severity and chronology of change",
+      "confusable_codes": [
+        "APP-AFFECT",
+        "INT-TURN"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Affect trajectory. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about affect evolution? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "KEEP-TECH",
+      "name": "Therapeutic move",
+      "group": "KEEP",
+      "definition": "Reflection, reframe, deliberate silence, offering a tissue or water, permission to defer a question. The procedural knowledge most downstream research wants.",
+      "generated": false,
+      "privacy_significance": "possible rare care-path combination",
+      "clinical_significance": "therapeutic technique and response",
+      "default_role": "utility-only",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "no default removal; separate names",
+      "must_preserve": "intervention, reason and observed response",
+      "confusable_codes": [
+        "CLI-SUPER",
+        "CLI-HUMOUR"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Therapeutic move. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about therapeutic technique and response? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "KEEP-CULT",
+      "name": "Cultural or religious content",
+      "group": "KEEP",
+      "definition": "Cultural or religious material with no linkage value.",
+      "generated": false,
+      "privacy_significance": "potential small-group linkage separately annotate",
+      "clinical_significance": "cultural explanatory context",
+      "default_role": "utility-only",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "no default removal; identifying specifics separately",
+      "must_preserve": "meaning and reported belief without stereotypes",
+      "confusable_codes": [
+        "DEM-COM",
+        "NAR-IDIOM"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Cultural or religious content. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about cultural explanatory context? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    },
+    {
+      "code": "KEEP-REL",
+      "name": "Relational dynamic",
+      "group": "KEEP",
+      "definition": "What the people around the speaker do to or with them — conflict, support, pressure, neglect — with no identifying specificity. The cargo layer of third-party content; any identifying fragment riding inside it is stacked as a secondary NAR-THIRD span and treated on its own.",
+      "generated": false,
+      "privacy_significance": "possible identifying relationship combination",
+      "clinical_significance": "agency, relationship, abuse/support/conflict",
+      "default_role": "utility-only",
+      "role_rule": "Reference annotator sets occurrence role from source and threat model before scoring; overlapping cues are not forced exclusive.",
+      "acceptable_transformations": [
+        "retain nonidentifying meaning",
+        "consistent actor pseudonym",
+        "source-supported generalization",
+        "minimal redaction of identifying specificity"
+      ],
+      "must_remove": "no default removal; names separately",
+      "must_preserve": "who did what to whom, polarity and uncertainty",
+      "confusable_codes": [
+        "DEM-FAM",
+        "NAR-THIRD",
+        "INT-DUAL"
+      ],
+      "metrics": [
+        "specificity-criterion protection",
+        "literal retention",
+        "atomic evidence preservation",
+        "contradiction/addition rate",
+        "CPUPS",
+        "coverage"
+      ],
+      "evidence_required": "Exact source offsets, speaker, session, turn, forbidden specificity criteria, protected atomic claims and independent annotation provenance.",
+      "modality": "text",
+      "unsupported_modality": "raw audio/video inference not evaluated",
+      "minimum_reporting": "Always show n and independent cases; n<5 cases is insufficient coverage, never a validated perfect result.",
+      "application_conditions": "Apply only to an explicitly evidenced occurrence of Relational dynamic. Select role per occurrence; do not infer attributes from geography, appearance or language.",
+      "unacceptable_semantic_alterations": "Changed actor, polarity, chronology, dose, severity, relationship or epistemic certainty; unsupported causes; fabricated duration.",
+      "clinical_question": "What does the source establish about agency, relationship, abuse/support/conflict? Which conclusions remain unknown?",
+      "annotation_uncertainty": "Record ambiguous evidence and unresolved attribution; do not force a clinically inferred label."
+    }
+  ]
+}

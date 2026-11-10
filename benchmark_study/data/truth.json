@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "negation-development-unchanged",
+    "case_id": "negation-development",
+    "family": "negation",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "negation-development-paraphrase",
+    "case_id": "negation-development",
+    "family": "negation",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "negation-development-altered",
+    "case_id": "negation-development",
+    "family": "negation",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "negation-development-deleted",
+    "case_id": "negation-development",
+    "family": "negation",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "negation-holdout-unchanged",
+    "case_id": "negation-holdout",
+    "family": "negation",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "negation-holdout-paraphrase",
+    "case_id": "negation-holdout",
+    "family": "negation",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "negation-holdout-altered",
+    "case_id": "negation-holdout",
+    "family": "negation",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "negation-holdout-deleted",
+    "case_id": "negation-holdout",
+    "family": "negation",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "agency-development-unchanged",
+    "case_id": "agency-development",
+    "family": "agency",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "agency-development-paraphrase",
+    "case_id": "agency-development",
+    "family": "agency",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "agency-development-altered",
+    "case_id": "agency-development",
+    "family": "agency",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "agency-development-deleted",
+    "case_id": "agency-development",
+    "family": "agency",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "agency-holdout-unchanged",
+    "case_id": "agency-holdout",
+    "family": "agency",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "agency-holdout-paraphrase",
+    "case_id": "agency-holdout",
+    "family": "agency",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "agency-holdout-altered",
+    "case_id": "agency-holdout",
+    "family": "agency",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "agency-holdout-deleted",
+    "case_id": "agency-holdout",
+    "family": "agency",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "chronology-development-unchanged",
+    "case_id": "chronology-development",
+    "family": "chronology",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "chronology-development-paraphrase",
+    "case_id": "chronology-development",
+    "family": "chronology",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "chronology-development-altered",
+    "case_id": "chronology-development",
+    "family": "chronology",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "chronology-development-deleted",
+    "case_id": "chronology-development",
+    "family": "chronology",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "chronology-holdout-unchanged",
+    "case_id": "chronology-holdout",
+    "family": "chronology",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "chronology-holdout-paraphrase",
+    "case_id": "chronology-holdout",
+    "family": "chronology",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "chronology-holdout-altered",
+    "case_id": "chronology-holdout",
+    "family": "chronology",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "chronology-holdout-deleted",
+    "case_id": "chronology-holdout",
+    "family": "chronology",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "severity-development-unchanged",
+    "case_id": "severity-development",
+    "family": "severity",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "severity-development-paraphrase",
+    "case_id": "severity-development",
+    "family": "severity",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "severity-development-altered",
+    "case_id": "severity-development",
+    "family": "severity",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "severity-development-deleted",
+    "case_id": "severity-development",
+    "family": "severity",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "severity-holdout-unchanged",
+    "case_id": "severity-holdout",
+    "family": "severity",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "severity-holdout-paraphrase",
+    "case_id": "severity-holdout",
+    "family": "severity",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "severity-holdout-altered",
+    "case_id": "severity-holdout",
+    "family": "severity",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "severity-holdout-deleted",
+    "case_id": "severity-holdout",
+    "family": "severity",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "dose-development-unchanged",
+    "case_id": "dose-development",
+    "family": "dose",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "dose-development-paraphrase",
+    "case_id": "dose-development",
+    "family": "dose",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "dose-development-altered",
+    "case_id": "dose-development",
+    "family": "dose",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "dose-development-deleted",
+    "case_id": "dose-development",
+    "family": "dose",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "dose-holdout-unchanged",
+    "case_id": "dose-holdout",
+    "family": "dose",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "dose-holdout-paraphrase",
+    "case_id": "dose-holdout",
+    "family": "dose",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "dose-holdout-altered",
+    "case_id": "dose-holdout",
+    "family": "dose",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "dose-holdout-deleted",
+    "case_id": "dose-holdout",
+    "family": "dose",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "relationship-development-unchanged",
+    "case_id": "relationship-development",
+    "family": "relationship",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "relationship-development-paraphrase",
+    "case_id": "relationship-development",
+    "family": "relationship",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "relationship-development-altered",
+    "case_id": "relationship-development",
+    "family": "relationship",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "relationship-development-deleted",
+    "case_id": "relationship-development",
+    "family": "relationship",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "relationship-holdout-unchanged",
+    "case_id": "relationship-holdout",
+    "family": "relationship",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "relationship-holdout-paraphrase",
+    "case_id": "relationship-holdout",
+    "family": "relationship",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "relationship-holdout-altered",
+    "case_id": "relationship-holdout",
+    "family": "relationship",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "relationship-holdout-deleted",
+    "case_id": "relationship-holdout",
+    "family": "relationship",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "coreference-development-unchanged",
+    "case_id": "coreference-development",
+    "family": "coreference",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "coreference-development-paraphrase",
+    "case_id": "coreference-development",
+    "family": "coreference",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "coreference-development-altered",
+    "case_id": "coreference-development",
+    "family": "coreference",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "coreference-development-deleted",
+    "case_id": "coreference-development",
+    "family": "coreference",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "coreference-holdout-unchanged",
+    "case_id": "coreference-holdout",
+    "family": "coreference",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "coreference-holdout-paraphrase",
+    "case_id": "coreference-holdout",
+    "family": "coreference",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "coreference-holdout-altered",
+    "case_id": "coreference-holdout",
+    "family": "coreference",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "coreference-holdout-deleted",
+    "case_id": "coreference-holdout",
+    "family": "coreference",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "uncertainty-development-unchanged",
+    "case_id": "uncertainty-development",
+    "family": "uncertainty",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "uncertainty-development-paraphrase",
+    "case_id": "uncertainty-development",
+    "family": "uncertainty",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "uncertainty-development-altered",
+    "case_id": "uncertainty-development",
+    "family": "uncertainty",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "uncertainty-development-deleted",
+    "case_id": "uncertainty-development",
+    "family": "uncertainty",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "uncertainty-holdout-unchanged",
+    "case_id": "uncertainty-holdout",
+    "family": "uncertainty",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "uncertainty-holdout-paraphrase",
+    "case_id": "uncertainty-holdout",
+    "family": "uncertainty",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "uncertainty-holdout-altered",
+    "case_id": "uncertainty-holdout",
+    "family": "uncertainty",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "uncertainty-holdout-deleted",
+    "case_id": "uncertainty-holdout",
+    "family": "uncertainty",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "intent-development-unchanged",
+    "case_id": "intent-development",
+    "family": "intent",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "intent-development-paraphrase",
+    "case_id": "intent-development",
+    "family": "intent",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "intent-development-altered",
+    "case_id": "intent-development",
+    "family": "intent",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "intent-development-deleted",
+    "case_id": "intent-development",
+    "family": "intent",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "intent-holdout-unchanged",
+    "case_id": "intent-holdout",
+    "family": "intent",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "intent-holdout-paraphrase",
+    "case_id": "intent-holdout",
+    "family": "intent",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "intent-holdout-altered",
+    "case_id": "intent-holdout",
+    "family": "intent",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "intent-holdout-deleted",
+    "case_id": "intent-holdout",
+    "family": "intent",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "spatial-development-unchanged",
+    "case_id": "spatial-development",
+    "family": "spatial",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "spatial-development-paraphrase",
+    "case_id": "spatial-development",
+    "family": "spatial",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "spatial-development-altered",
+    "case_id": "spatial-development",
+    "family": "spatial",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "spatial-development-deleted",
+    "case_id": "spatial-development",
+    "family": "spatial",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "spatial-holdout-unchanged",
+    "case_id": "spatial-holdout",
+    "family": "spatial",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "spatial-holdout-paraphrase",
+    "case_id": "spatial-holdout",
+    "family": "spatial",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "spatial-holdout-altered",
+    "case_id": "spatial-holdout",
+    "family": "spatial",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "spatial-holdout-deleted",
+    "case_id": "spatial-holdout",
+    "family": "spatial",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "deletion-development-unchanged",
+    "case_id": "deletion-development",
+    "family": "deletion",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "deletion-development-paraphrase",
+    "case_id": "deletion-development",
+    "family": "deletion",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "deletion-development-altered",
+    "case_id": "deletion-development",
+    "family": "deletion",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "deletion-development-deleted",
+    "case_id": "deletion-development",
+    "family": "deletion",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "deletion-holdout-unchanged",
+    "case_id": "deletion-holdout",
+    "family": "deletion",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "deletion-holdout-paraphrase",
+    "case_id": "deletion-holdout",
+    "family": "deletion",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": null
+  },
+  {
+    "id": "deletion-holdout-altered",
+    "case_id": "deletion-holdout",
+    "family": "deletion",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "deletion-holdout-deleted",
+    "case_id": "deletion-holdout",
+    "family": "deletion",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": null
+  },
+  {
+    "id": "geography-development-unchanged",
+    "case_id": "geography-development",
+    "family": "geography",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": 0
+  },
+  {
+    "id": "geography-development-paraphrase",
+    "case_id": "geography-development",
+    "family": "geography",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": 1
+  },
+  {
+    "id": "geography-development-altered",
+    "case_id": "geography-development",
+    "family": "geography",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": 1
+  },
+  {
+    "id": "geography-development-deleted",
+    "case_id": "geography-development",
+    "family": "geography",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": 1
+  },
+  {
+    "id": "geography-holdout-unchanged",
+    "case_id": "geography-holdout",
+    "family": "geography",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": 0
+  },
+  {
+    "id": "geography-holdout-paraphrase",
+    "case_id": "geography-holdout",
+    "family": "geography",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": 1
+  },
+  {
+    "id": "geography-holdout-altered",
+    "case_id": "geography-holdout",
+    "family": "geography",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": 1
+  },
+  {
+    "id": "geography-holdout-deleted",
+    "case_id": "geography-holdout",
+    "family": "geography",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": 1
+  },
+  {
+    "id": "rare_event-development-unchanged",
+    "case_id": "rare_event-development",
+    "family": "rare_event",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": 0
+  },
+  {
+    "id": "rare_event-development-paraphrase",
+    "case_id": "rare_event-development",
+    "family": "rare_event",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": 1
+  },
+  {
+    "id": "rare_event-development-altered",
+    "case_id": "rare_event-development",
+    "family": "rare_event",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": 1
+  },
+  {
+    "id": "rare_event-development-deleted",
+    "case_id": "rare_event-development",
+    "family": "rare_event",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": 1
+  },
+  {
+    "id": "rare_event-holdout-unchanged",
+    "case_id": "rare_event-holdout",
+    "family": "rare_event",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": 0
+  },
+  {
+    "id": "rare_event-holdout-paraphrase",
+    "case_id": "rare_event-holdout",
+    "family": "rare_event",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": 1
+  },
+  {
+    "id": "rare_event-holdout-altered",
+    "case_id": "rare_event-holdout",
+    "family": "rare_event",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": 1
+  },
+  {
+    "id": "rare_event-holdout-deleted",
+    "case_id": "rare_event-holdout",
+    "family": "rare_event",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": 1
+  },
+  {
+    "id": "cumulative-development-unchanged",
+    "case_id": "cumulative-development",
+    "family": "cumulative",
+    "variant": "unchanged",
+    "split": "development",
+    "U": 1,
+    "P": 0
+  },
+  {
+    "id": "cumulative-development-paraphrase",
+    "case_id": "cumulative-development",
+    "family": "cumulative",
+    "variant": "paraphrase",
+    "split": "development",
+    "U": 1,
+    "P": 1
+  },
+  {
+    "id": "cumulative-development-altered",
+    "case_id": "cumulative-development",
+    "family": "cumulative",
+    "variant": "altered",
+    "split": "development",
+    "U": 0,
+    "P": 1
+  },
+  {
+    "id": "cumulative-development-deleted",
+    "case_id": "cumulative-development",
+    "family": "cumulative",
+    "variant": "deleted",
+    "split": "development",
+    "U": 0,
+    "P": 1
+  },
+  {
+    "id": "cumulative-holdout-unchanged",
+    "case_id": "cumulative-holdout",
+    "family": "cumulative",
+    "variant": "unchanged",
+    "split": "holdout",
+    "U": 1,
+    "P": 0
+  },
+  {
+    "id": "cumulative-holdout-paraphrase",
+    "case_id": "cumulative-holdout",
+    "family": "cumulative",
+    "variant": "paraphrase",
+    "split": "holdout",
+    "U": 1,
+    "P": 1
+  },
+  {
+    "id": "cumulative-holdout-altered",
+    "case_id": "cumulative-holdout",
+    "family": "cumulative",
+    "variant": "altered",
+    "split": "holdout",
+    "U": 0,
+    "P": 1
+  },
+  {
+    "id": "cumulative-holdout-deleted",
+    "case_id": "cumulative-holdout",
+    "family": "cumulative",
+    "variant": "deleted",
+    "split": "holdout",
+    "U": 0,
+    "P": 1
+  }
+]

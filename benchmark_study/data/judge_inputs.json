@@ -1,0 +1,3750 @@
+[
+  {
+    "id": "negation-development-unchanged",
+    "case_id": "negation-development",
+    "family": "negation",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient denies hearing voices while awake.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient denies hearing voices while awake.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient denies hearing voices while awake.",
+        "source_span": [
+          142,
+          188
+        ],
+        "question": "What does the source establish about negation? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient denies hearing voices while awake.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "negation-development-paraphrase",
+    "case_id": "negation-development",
+    "family": "negation",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient denies hearing voices while awake.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. While awake, the patient reports no voices.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient denies hearing voices while awake.",
+        "source_span": [
+          142,
+          188
+        ],
+        "question": "What does the source establish about negation? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient denies hearing voices while awake.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "negation-development-altered",
+    "case_id": "negation-development",
+    "family": "negation",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient denies hearing voices while awake.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient hears voices while awake.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient denies hearing voices while awake.",
+        "source_span": [
+          142,
+          188
+        ],
+        "question": "What does the source establish about negation? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient denies hearing voices while awake.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "negation-development-deleted",
+    "case_id": "negation-development",
+    "family": "negation",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient denies hearing voices while awake.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient denies hearing voices while awake.",
+        "source_span": [
+          142,
+          188
+        ],
+        "question": "What does the source establish about negation? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient denies hearing voices while awake.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "negation-holdout-unchanged",
+    "case_id": "negation-holdout",
+    "family": "negation",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. There was no chest pain during the panic episode.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. There was no chest pain during the panic episode.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "There was no chest pain during the panic episode.",
+        "source_span": [
+          129,
+          178
+        ],
+        "question": "What does the source establish about negation? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "There was no chest pain during the panic episode.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "negation-holdout-paraphrase",
+    "case_id": "negation-holdout",
+    "family": "negation",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. There was no chest pain during the panic episode.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Chest pain was absent throughout the panic episode.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "There was no chest pain during the panic episode.",
+        "source_span": [
+          129,
+          178
+        ],
+        "question": "What does the source establish about negation? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "There was no chest pain during the panic episode.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "negation-holdout-altered",
+    "case_id": "negation-holdout",
+    "family": "negation",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. There was no chest pain during the panic episode.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Chest pain occurred during the panic episode.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "There was no chest pain during the panic episode.",
+        "source_span": [
+          129,
+          178
+        ],
+        "question": "What does the source establish about negation? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "There was no chest pain during the panic episode.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "negation-holdout-deleted",
+    "case_id": "negation-holdout",
+    "family": "negation",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. There was no chest pain during the panic episode.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "There was no chest pain during the panic episode.",
+        "source_span": [
+          129,
+          178
+        ],
+        "question": "What does the source establish about negation? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "There was no chest pain during the panic episode.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "agency-development-unchanged",
+    "case_id": "agency-development",
+    "family": "agency",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. During the argument, the father pushed the patient; the patient did not push him.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. During the argument, the father pushed the patient; the patient did not push him.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "During the argument, the father pushed the patient; the patient did not push him.",
+        "source_span": [
+          142,
+          223
+        ],
+        "question": "What does the source establish about agency? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "During the argument, the father pushed the patient; the patient did not push him.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "agency-development-paraphrase",
+    "case_id": "agency-development",
+    "family": "agency",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. During the argument, the father pushed the patient; the patient did not push him.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient was pushed by the father in the argument and did not push back.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "During the argument, the father pushed the patient; the patient did not push him.",
+        "source_span": [
+          142,
+          223
+        ],
+        "question": "What does the source establish about agency? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "During the argument, the father pushed the patient; the patient did not push him.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "agency-development-altered",
+    "case_id": "agency-development",
+    "family": "agency",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. During the argument, the father pushed the patient; the patient did not push him.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. During the argument, the patient pushed the father; the father did not push the patient.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "During the argument, the father pushed the patient; the patient did not push him.",
+        "source_span": [
+          142,
+          223
+        ],
+        "question": "What does the source establish about agency? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "During the argument, the father pushed the patient; the patient did not push him.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "agency-development-deleted",
+    "case_id": "agency-development",
+    "family": "agency",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. During the argument, the father pushed the patient; the patient did not push him.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "During the argument, the father pushed the patient; the patient did not push him.",
+        "source_span": [
+          142,
+          223
+        ],
+        "question": "What does the source establish about agency? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "During the argument, the father pushed the patient; the patient did not push him.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "agency-holdout-unchanged",
+    "case_id": "agency-holdout",
+    "family": "agency",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The colleague threatened the patient after work.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The colleague threatened the patient after work.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The colleague threatened the patient after work.",
+        "source_span": [
+          129,
+          177
+        ],
+        "question": "What does the source establish about agency? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The colleague threatened the patient after work.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "agency-holdout-paraphrase",
+    "case_id": "agency-holdout",
+    "family": "agency",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The colleague threatened the patient after work.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After work the patient received a threat from the colleague.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The colleague threatened the patient after work.",
+        "source_span": [
+          129,
+          177
+        ],
+        "question": "What does the source establish about agency? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The colleague threatened the patient after work.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "agency-holdout-altered",
+    "case_id": "agency-holdout",
+    "family": "agency",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The colleague threatened the patient after work.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient threatened the colleague after work.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The colleague threatened the patient after work.",
+        "source_span": [
+          129,
+          177
+        ],
+        "question": "What does the source establish about agency? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The colleague threatened the patient after work.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "agency-holdout-deleted",
+    "case_id": "agency-holdout",
+    "family": "agency",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The colleague threatened the patient after work.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The colleague threatened the patient after work.",
+        "source_span": [
+          129,
+          177
+        ],
+        "question": "What does the source establish about agency? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The colleague threatened the patient after work.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "chronology-development-unchanged",
+    "case_id": "chronology-development",
+    "family": "chronology",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The nightmares began before the move, and treatment started after the move.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The nightmares began before the move, and treatment started after the move.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The nightmares began before the move, and treatment started after the move.",
+        "source_span": [
+          142,
+          217
+        ],
+        "question": "What does the source establish about chronology? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The nightmares began before the move, and treatment started after the move.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "chronology-development-paraphrase",
+    "case_id": "chronology-development",
+    "family": "chronology",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The nightmares began before the move, and treatment started after the move.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. Nightmares preceded relocation; treatment followed relocation.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The nightmares began before the move, and treatment started after the move.",
+        "source_span": [
+          142,
+          217
+        ],
+        "question": "What does the source establish about chronology? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The nightmares began before the move, and treatment started after the move.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "chronology-development-altered",
+    "case_id": "chronology-development",
+    "family": "chronology",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The nightmares began before the move, and treatment started after the move.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The nightmares began after the move, and treatment started before the move.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The nightmares began before the move, and treatment started after the move.",
+        "source_span": [
+          142,
+          217
+        ],
+        "question": "What does the source establish about chronology? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The nightmares began before the move, and treatment started after the move.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "chronology-development-deleted",
+    "case_id": "chronology-development",
+    "family": "chronology",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The nightmares began before the move, and treatment started after the move.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The nightmares began before the move, and treatment started after the move.",
+        "source_span": [
+          142,
+          217
+        ],
+        "question": "What does the source establish about chronology? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The nightmares began before the move, and treatment started after the move.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "chronology-holdout-unchanged",
+    "case_id": "chronology-holdout",
+    "family": "chronology",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Nausea started two days after the medication dose increased.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Nausea started two days after the medication dose increased.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "Nausea started two days after the medication dose increased.",
+        "source_span": [
+          129,
+          189
+        ],
+        "question": "What does the source establish about chronology? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "Nausea started two days after the medication dose increased.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "chronology-holdout-paraphrase",
+    "case_id": "chronology-holdout",
+    "family": "chronology",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Nausea started two days after the medication dose increased.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Two days following the dose increase, nausea began.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "Nausea started two days after the medication dose increased.",
+        "source_span": [
+          129,
+          189
+        ],
+        "question": "What does the source establish about chronology? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "Nausea started two days after the medication dose increased.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "chronology-holdout-altered",
+    "case_id": "chronology-holdout",
+    "family": "chronology",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Nausea started two days after the medication dose increased.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Nausea started two days before the medication dose increased.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "Nausea started two days after the medication dose increased.",
+        "source_span": [
+          129,
+          189
+        ],
+        "question": "What does the source establish about chronology? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "Nausea started two days after the medication dose increased.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "chronology-holdout-deleted",
+    "case_id": "chronology-holdout",
+    "family": "chronology",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Nausea started two days after the medication dose increased.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "Nausea started two days after the medication dose increased.",
+        "source_span": [
+          129,
+          189
+        ],
+        "question": "What does the source establish about chronology? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "Nausea started two days after the medication dose increased.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "severity-development-unchanged",
+    "case_id": "severity-development",
+    "family": "severity",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The headaches became severe after initially being mild.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The headaches became severe after initially being mild.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-AFFECT"
+        ],
+        "evidence": "The headaches became severe after initially being mild.",
+        "source_span": [
+          142,
+          197
+        ],
+        "question": "What does the source establish about severity? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The headaches became severe after initially being mild.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "severity-development-paraphrase",
+    "case_id": "severity-development",
+    "family": "severity",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The headaches became severe after initially being mild.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. Initially mild headaches subsequently became intense.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-AFFECT"
+        ],
+        "evidence": "The headaches became severe after initially being mild.",
+        "source_span": [
+          142,
+          197
+        ],
+        "question": "What does the source establish about severity? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The headaches became severe after initially being mild.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "severity-development-altered",
+    "case_id": "severity-development",
+    "family": "severity",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The headaches became severe after initially being mild.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The headaches became mild after initially being severe.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-AFFECT"
+        ],
+        "evidence": "The headaches became severe after initially being mild.",
+        "source_span": [
+          142,
+          197
+        ],
+        "question": "What does the source establish about severity? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The headaches became severe after initially being mild.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "severity-development-deleted",
+    "case_id": "severity-development",
+    "family": "severity",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The headaches became severe after initially being mild.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-AFFECT"
+        ],
+        "evidence": "The headaches became severe after initially being mild.",
+        "source_span": [
+          142,
+          197
+        ],
+        "question": "What does the source establish about severity? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The headaches became severe after initially being mild.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "severity-holdout-unchanged",
+    "case_id": "severity-holdout",
+    "family": "severity",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Panic episodes decreased from daily to once a week.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Panic episodes decreased from daily to once a week.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "Panic episodes decreased from daily to once a week.",
+        "source_span": [
+          129,
+          180
+        ],
+        "question": "What does the source establish about severity? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "Panic episodes decreased from daily to once a week.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "severity-holdout-paraphrase",
+    "case_id": "severity-holdout",
+    "family": "severity",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Panic episodes decreased from daily to once a week.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Panic attacks now occur weekly rather than every day.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "Panic episodes decreased from daily to once a week.",
+        "source_span": [
+          129,
+          180
+        ],
+        "question": "What does the source establish about severity? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "Panic episodes decreased from daily to once a week.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "severity-holdout-altered",
+    "case_id": "severity-holdout",
+    "family": "severity",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Panic episodes decreased from daily to once a week.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Panic episodes increased from weekly to daily.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "Panic episodes decreased from daily to once a week.",
+        "source_span": [
+          129,
+          180
+        ],
+        "question": "What does the source establish about severity? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "Panic episodes decreased from daily to once a week.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "severity-holdout-deleted",
+    "case_id": "severity-holdout",
+    "family": "severity",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Panic episodes decreased from daily to once a week.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "Panic episodes decreased from daily to once a week.",
+        "source_span": [
+          129,
+          180
+        ],
+        "question": "What does the source establish about severity? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "Panic episodes decreased from daily to once a week.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "dose-development-unchanged",
+    "case_id": "dose-development",
+    "family": "dose",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinician reduced sertraline from 100 mg to 50 mg daily.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinician reduced sertraline from 100 mg to 50 mg daily.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-TECH"
+        ],
+        "evidence": "The clinician reduced sertraline from 100 mg to 50 mg daily.",
+        "source_span": [
+          142,
+          202
+        ],
+        "question": "What does the source establish about dose? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The clinician reduced sertraline from 100 mg to 50 mg daily.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "dose-development-paraphrase",
+    "case_id": "dose-development",
+    "family": "dose",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinician reduced sertraline from 100 mg to 50 mg daily.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The daily sertraline dose was lowered by the clinician from one hundred to fifty milligrams.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-TECH"
+        ],
+        "evidence": "The clinician reduced sertraline from 100 mg to 50 mg daily.",
+        "source_span": [
+          142,
+          202
+        ],
+        "question": "What does the source establish about dose? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The clinician reduced sertraline from 100 mg to 50 mg daily.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "dose-development-altered",
+    "case_id": "dose-development",
+    "family": "dose",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinician reduced sertraline from 100 mg to 50 mg daily.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinician increased sertraline from 50 mg to 100 mg daily.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-TECH"
+        ],
+        "evidence": "The clinician reduced sertraline from 100 mg to 50 mg daily.",
+        "source_span": [
+          142,
+          202
+        ],
+        "question": "What does the source establish about dose? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The clinician reduced sertraline from 100 mg to 50 mg daily.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "dose-development-deleted",
+    "case_id": "dose-development",
+    "family": "dose",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinician reduced sertraline from 100 mg to 50 mg daily.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-TECH"
+        ],
+        "evidence": "The clinician reduced sertraline from 100 mg to 50 mg daily.",
+        "source_span": [
+          142,
+          202
+        ],
+        "question": "What does the source establish about dose? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The clinician reduced sertraline from 100 mg to 50 mg daily.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "dose-holdout-unchanged",
+    "case_id": "dose-holdout",
+    "family": "dose",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The prescription is propranolol 10 mg twice daily, not 100 mg.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The prescription is propranolol 10 mg twice daily, not 100 mg.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-TECH"
+        ],
+        "evidence": "The prescription is propranolol 10 mg twice daily, not 100 mg.",
+        "source_span": [
+          129,
+          191
+        ],
+        "question": "What does the source establish about dose? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The prescription is propranolol 10 mg twice daily, not 100 mg.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "dose-holdout-paraphrase",
+    "case_id": "dose-holdout",
+    "family": "dose",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The prescription is propranolol 10 mg twice daily, not 100 mg.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Propranolol is prescribed at ten milligrams two times a day, rather than one hundred milligrams.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-TECH"
+        ],
+        "evidence": "The prescription is propranolol 10 mg twice daily, not 100 mg.",
+        "source_span": [
+          129,
+          191
+        ],
+        "question": "What does the source establish about dose? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The prescription is propranolol 10 mg twice daily, not 100 mg.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "dose-holdout-altered",
+    "case_id": "dose-holdout",
+    "family": "dose",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The prescription is propranolol 10 mg twice daily, not 100 mg.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The prescription is propranolol 100 mg twice daily, not 10 mg.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-TECH"
+        ],
+        "evidence": "The prescription is propranolol 10 mg twice daily, not 100 mg.",
+        "source_span": [
+          129,
+          191
+        ],
+        "question": "What does the source establish about dose? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The prescription is propranolol 10 mg twice daily, not 100 mg.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "dose-holdout-deleted",
+    "case_id": "dose-holdout",
+    "family": "dose",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The prescription is propranolol 10 mg twice daily, not 100 mg.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-TECH"
+        ],
+        "evidence": "The prescription is propranolol 10 mg twice daily, not 100 mg.",
+        "source_span": [
+          129,
+          191
+        ],
+        "question": "What does the source establish about dose? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The prescription is propranolol 10 mg twice daily, not 100 mg.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "relationship-development-unchanged",
+    "case_id": "relationship-development",
+    "family": "relationship",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The aunt provides childcare; the mother cannot provide childcare.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The aunt provides childcare; the mother cannot provide childcare.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The aunt provides childcare; the mother cannot provide childcare.",
+        "source_span": [
+          142,
+          207
+        ],
+        "question": "What does the source establish about relationship? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The aunt provides childcare; the mother cannot provide childcare.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "relationship-development-paraphrase",
+    "case_id": "relationship-development",
+    "family": "relationship",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The aunt provides childcare; the mother cannot provide childcare.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. Childcare is provided by the aunt because the mother is unable to provide it.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The aunt provides childcare; the mother cannot provide childcare.",
+        "source_span": [
+          142,
+          207
+        ],
+        "question": "What does the source establish about relationship? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The aunt provides childcare; the mother cannot provide childcare.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "relationship-development-altered",
+    "case_id": "relationship-development",
+    "family": "relationship",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The aunt provides childcare; the mother cannot provide childcare.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The mother provides childcare; the aunt cannot provide childcare.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The aunt provides childcare; the mother cannot provide childcare.",
+        "source_span": [
+          142,
+          207
+        ],
+        "question": "What does the source establish about relationship? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The aunt provides childcare; the mother cannot provide childcare.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "relationship-development-deleted",
+    "case_id": "relationship-development",
+    "family": "relationship",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The aunt provides childcare; the mother cannot provide childcare.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The aunt provides childcare; the mother cannot provide childcare.",
+        "source_span": [
+          142,
+          207
+        ],
+        "question": "What does the source establish about relationship? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The aunt provides childcare; the mother cannot provide childcare.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "relationship-holdout-unchanged",
+    "case_id": "relationship-holdout",
+    "family": "relationship",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient feels safe with the sister but unsafe with the partner.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient feels safe with the sister but unsafe with the partner.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The patient feels safe with the sister but unsafe with the partner.",
+        "source_span": [
+          129,
+          196
+        ],
+        "question": "What does the source establish about relationship? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient feels safe with the sister but unsafe with the partner.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "relationship-holdout-paraphrase",
+    "case_id": "relationship-holdout",
+    "family": "relationship",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient feels safe with the sister but unsafe with the partner.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The sister feels safe to the patient; the partner does not.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The patient feels safe with the sister but unsafe with the partner.",
+        "source_span": [
+          129,
+          196
+        ],
+        "question": "What does the source establish about relationship? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient feels safe with the sister but unsafe with the partner.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "relationship-holdout-altered",
+    "case_id": "relationship-holdout",
+    "family": "relationship",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient feels safe with the sister but unsafe with the partner.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient feels safe with the partner but unsafe with the sister.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The patient feels safe with the sister but unsafe with the partner.",
+        "source_span": [
+          129,
+          196
+        ],
+        "question": "What does the source establish about relationship? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient feels safe with the sister but unsafe with the partner.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "relationship-holdout-deleted",
+    "case_id": "relationship-holdout",
+    "family": "relationship",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient feels safe with the sister but unsafe with the partner.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The patient feels safe with the sister but unsafe with the partner.",
+        "source_span": [
+          129,
+          196
+        ],
+        "question": "What does the source establish about relationship? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient feels safe with the sister but unsafe with the partner.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "coreference-development-unchanged",
+    "case_id": "coreference-development",
+    "family": "coreference",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient has two cousins. The older cousin borrowed money, and the younger cousin repaid it.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient has two cousins. The older cousin borrowed money, and the younger cousin repaid it.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The patient has two cousins. The older cousin borrowed money, and the younger cousin repaid it.",
+        "source_span": [
+          142,
+          237
+        ],
+        "question": "What does the source establish about coreference? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient has two cousins. The older cousin borrowed money, and the younger cousin repaid it.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "coreference-development-paraphrase",
+    "case_id": "coreference-development",
+    "family": "coreference",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient has two cousins. The older cousin borrowed money, and the younger cousin repaid it.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. Of two cousins, the older one took the loan and the younger one paid it back.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The patient has two cousins. The older cousin borrowed money, and the younger cousin repaid it.",
+        "source_span": [
+          142,
+          237
+        ],
+        "question": "What does the source establish about coreference? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient has two cousins. The older cousin borrowed money, and the younger cousin repaid it.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "coreference-development-altered",
+    "case_id": "coreference-development",
+    "family": "coreference",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient has two cousins. The older cousin borrowed money, and the younger cousin repaid it.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient has two cousins. The younger cousin borrowed money, and the older cousin repaid it.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The patient has two cousins. The older cousin borrowed money, and the younger cousin repaid it.",
+        "source_span": [
+          142,
+          237
+        ],
+        "question": "What does the source establish about coreference? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient has two cousins. The older cousin borrowed money, and the younger cousin repaid it.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "coreference-development-deleted",
+    "case_id": "coreference-development",
+    "family": "coreference",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient has two cousins. The older cousin borrowed money, and the younger cousin repaid it.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The patient has two cousins. The older cousin borrowed money, and the younger cousin repaid it.",
+        "source_span": [
+          142,
+          237
+        ],
+        "question": "What does the source establish about coreference? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient has two cousins. The older cousin borrowed money, and the younger cousin repaid it.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "coreference-holdout-unchanged",
+    "case_id": "coreference-holdout",
+    "family": "coreference",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The nurse and the patient spoke. The nurse, not the patient, called the psychiatrist.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The nurse and the patient spoke. The nurse, not the patient, called the psychiatrist.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The nurse and the patient spoke. The nurse, not the patient, called the psychiatrist.",
+        "source_span": [
+          129,
+          214
+        ],
+        "question": "What does the source establish about coreference? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The nurse and the patient spoke. The nurse, not the patient, called the psychiatrist.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "coreference-holdout-paraphrase",
+    "case_id": "coreference-holdout",
+    "family": "coreference",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The nurse and the patient spoke. The nurse, not the patient, called the psychiatrist.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After their conversation, it was the nurse who phoned the psychiatrist, not the patient.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The nurse and the patient spoke. The nurse, not the patient, called the psychiatrist.",
+        "source_span": [
+          129,
+          214
+        ],
+        "question": "What does the source establish about coreference? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The nurse and the patient spoke. The nurse, not the patient, called the psychiatrist.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "coreference-holdout-altered",
+    "case_id": "coreference-holdout",
+    "family": "coreference",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The nurse and the patient spoke. The nurse, not the patient, called the psychiatrist.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The nurse and the patient spoke. The patient, not the nurse, called the psychiatrist.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The nurse and the patient spoke. The nurse, not the patient, called the psychiatrist.",
+        "source_span": [
+          129,
+          214
+        ],
+        "question": "What does the source establish about coreference? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The nurse and the patient spoke. The nurse, not the patient, called the psychiatrist.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "coreference-holdout-deleted",
+    "case_id": "coreference-holdout",
+    "family": "coreference",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The nurse and the patient spoke. The nurse, not the patient, called the psychiatrist.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The nurse and the patient spoke. The nurse, not the patient, called the psychiatrist.",
+        "source_span": [
+          129,
+          214
+        ],
+        "question": "What does the source establish about coreference? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The nurse and the patient spoke. The nurse, not the patient, called the psychiatrist.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "uncertainty-development-unchanged",
+    "case_id": "uncertainty-development",
+    "family": "uncertainty",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient is unsure whether the new job contributed to insomnia.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient is unsure whether the new job contributed to insomnia.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient is unsure whether the new job contributed to insomnia.",
+        "source_span": [
+          142,
+          208
+        ],
+        "question": "What does the source establish about uncertainty? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient is unsure whether the new job contributed to insomnia.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "uncertainty-development-paraphrase",
+    "case_id": "uncertainty-development",
+    "family": "uncertainty",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient is unsure whether the new job contributed to insomnia.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. A contribution of the new job to insomnia remains uncertain to the patient.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient is unsure whether the new job contributed to insomnia.",
+        "source_span": [
+          142,
+          208
+        ],
+        "question": "What does the source establish about uncertainty? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient is unsure whether the new job contributed to insomnia.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "uncertainty-development-altered",
+    "case_id": "uncertainty-development",
+    "family": "uncertainty",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient is unsure whether the new job contributed to insomnia.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient is certain the new job caused insomnia.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient is unsure whether the new job contributed to insomnia.",
+        "source_span": [
+          142,
+          208
+        ],
+        "question": "What does the source establish about uncertainty? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient is unsure whether the new job contributed to insomnia.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "uncertainty-development-deleted",
+    "case_id": "uncertainty-development",
+    "family": "uncertainty",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient is unsure whether the new job contributed to insomnia.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient is unsure whether the new job contributed to insomnia.",
+        "source_span": [
+          142,
+          208
+        ],
+        "question": "What does the source establish about uncertainty? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient is unsure whether the new job contributed to insomnia.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "uncertainty-holdout-unchanged",
+    "case_id": "uncertainty-holdout",
+    "family": "uncertainty",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinician has not established whether the shaking is medication-related.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinician has not established whether the shaking is medication-related.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The clinician has not established whether the shaking is medication-related.",
+        "source_span": [
+          129,
+          205
+        ],
+        "question": "What does the source establish about uncertainty? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The clinician has not established whether the shaking is medication-related.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "uncertainty-holdout-paraphrase",
+    "case_id": "uncertainty-holdout",
+    "family": "uncertainty",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinician has not established whether the shaking is medication-related.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Whether medication explains the shaking remains undetermined by the clinician.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The clinician has not established whether the shaking is medication-related.",
+        "source_span": [
+          129,
+          205
+        ],
+        "question": "What does the source establish about uncertainty? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The clinician has not established whether the shaking is medication-related.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "uncertainty-holdout-altered",
+    "case_id": "uncertainty-holdout",
+    "family": "uncertainty",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinician has not established whether the shaking is medication-related.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinician has established that the shaking is medication-related.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The clinician has not established whether the shaking is medication-related.",
+        "source_span": [
+          129,
+          205
+        ],
+        "question": "What does the source establish about uncertainty? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The clinician has not established whether the shaking is medication-related.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "uncertainty-holdout-deleted",
+    "case_id": "uncertainty-holdout",
+    "family": "uncertainty",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinician has not established whether the shaking is medication-related.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The clinician has not established whether the shaking is medication-related.",
+        "source_span": [
+          129,
+          205
+        ],
+        "question": "What does the source establish about uncertainty? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The clinician has not established whether the shaking is medication-related.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "intent-development-unchanged",
+    "case_id": "intent-development",
+    "family": "intent",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient reports thoughts of death but denies a plan or intent to act.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient reports thoughts of death but denies a plan or intent to act.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient reports thoughts of death but denies a plan or intent to act.",
+        "source_span": [
+          142,
+          215
+        ],
+        "question": "What does the source establish about intent? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient reports thoughts of death but denies a plan or intent to act.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "intent-development-paraphrase",
+    "case_id": "intent-development",
+    "family": "intent",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient reports thoughts of death but denies a plan or intent to act.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. Death-related thoughts are present, with neither an action plan nor intent reported.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient reports thoughts of death but denies a plan or intent to act.",
+        "source_span": [
+          142,
+          215
+        ],
+        "question": "What does the source establish about intent? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient reports thoughts of death but denies a plan or intent to act.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "intent-development-altered",
+    "case_id": "intent-development",
+    "family": "intent",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient reports thoughts of death but denies a plan or intent to act.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient reports thoughts of death with a plan and intent to act.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient reports thoughts of death but denies a plan or intent to act.",
+        "source_span": [
+          142,
+          215
+        ],
+        "question": "What does the source establish about intent? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient reports thoughts of death but denies a plan or intent to act.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "intent-development-deleted",
+    "case_id": "intent-development",
+    "family": "intent",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient reports thoughts of death but denies a plan or intent to act.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient reports thoughts of death but denies a plan or intent to act.",
+        "source_span": [
+          142,
+          215
+        ],
+        "question": "What does the source establish about intent? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient reports thoughts of death but denies a plan or intent to act.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "intent-holdout-unchanged",
+    "case_id": "intent-holdout",
+    "family": "intent",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient denies current suicidal thoughts but reports an attempt several years ago.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient denies current suicidal thoughts but reports an attempt several years ago.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient denies current suicidal thoughts but reports an attempt several years ago.",
+        "source_span": [
+          129,
+          215
+        ],
+        "question": "What does the source establish about intent? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient denies current suicidal thoughts but reports an attempt several years ago.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "intent-holdout-paraphrase",
+    "case_id": "intent-holdout",
+    "family": "intent",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient denies current suicidal thoughts but reports an attempt several years ago.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. There is a past suicide attempt years earlier; current suicidal thinking is denied.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient denies current suicidal thoughts but reports an attempt several years ago.",
+        "source_span": [
+          129,
+          215
+        ],
+        "question": "What does the source establish about intent? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient denies current suicidal thoughts but reports an attempt several years ago.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "intent-holdout-altered",
+    "case_id": "intent-holdout",
+    "family": "intent",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient denies current suicidal thoughts but reports an attempt several years ago.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient reports current suicidal thoughts but denies any past attempt.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient denies current suicidal thoughts but reports an attempt several years ago.",
+        "source_span": [
+          129,
+          215
+        ],
+        "question": "What does the source establish about intent? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient denies current suicidal thoughts but reports an attempt several years ago.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "intent-holdout-deleted",
+    "case_id": "intent-holdout",
+    "family": "intent",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient denies current suicidal thoughts but reports an attempt several years ago.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient denies current suicidal thoughts but reports an attempt several years ago.",
+        "source_span": [
+          129,
+          215
+        ],
+        "question": "What does the source establish about intent? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient denies current suicidal thoughts but reports an attempt several years ago.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "spatial-development-unchanged",
+    "case_id": "spatial-development",
+    "family": "spatial",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. During the assault, the patient hid behind a tree and saw the attacker pass; whether the attacker saw the patient is not established.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. During the assault, the patient hid behind a tree and saw the attacker pass; whether the attacker saw the patient is not established.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "During the assault, the patient hid behind a tree and saw the attacker pass; whether the attacker saw the patient is not established.",
+        "source_span": [
+          142,
+          275
+        ],
+        "question": "What does the source establish about spatial? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "During the assault, the patient hid behind a tree and saw the attacker pass; whether the attacker saw the patient is not established.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "spatial-development-paraphrase",
+    "case_id": "spatial-development",
+    "family": "spatial",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. During the assault, the patient hid behind a tree and saw the attacker pass; whether the attacker saw the patient is not established.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. Concealed behind a tree during the assault, the patient watched the attacker pass; the attacker noticing the patient remains unknown.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "During the assault, the patient hid behind a tree and saw the attacker pass; whether the attacker saw the patient is not established.",
+        "source_span": [
+          142,
+          275
+        ],
+        "question": "What does the source establish about spatial? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "During the assault, the patient hid behind a tree and saw the attacker pass; whether the attacker saw the patient is not established.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "spatial-development-altered",
+    "case_id": "spatial-development",
+    "family": "spatial",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. During the assault, the patient hid behind a tree and saw the attacker pass; whether the attacker saw the patient is not established.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. During the assault, the patient hid behind a tree and saw the attacker pass; the attacker definitely saw the patient.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "During the assault, the patient hid behind a tree and saw the attacker pass; whether the attacker saw the patient is not established.",
+        "source_span": [
+          142,
+          275
+        ],
+        "question": "What does the source establish about spatial? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "During the assault, the patient hid behind a tree and saw the attacker pass; whether the attacker saw the patient is not established.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "spatial-development-deleted",
+    "case_id": "spatial-development",
+    "family": "spatial",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. During the assault, the patient hid behind a tree and saw the attacker pass; whether the attacker saw the patient is not established.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "During the assault, the patient hid behind a tree and saw the attacker pass; whether the attacker saw the patient is not established.",
+        "source_span": [
+          142,
+          275
+        ],
+        "question": "What does the source establish about spatial? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "During the assault, the patient hid behind a tree and saw the attacker pass; whether the attacker saw the patient is not established.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "spatial-holdout-unchanged",
+    "case_id": "spatial-holdout",
+    "family": "spatial",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient waited inside the locked room while the threatening visitor remained outside.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient waited inside the locked room while the threatening visitor remained outside.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The patient waited inside the locked room while the threatening visitor remained outside.",
+        "source_span": [
+          129,
+          218
+        ],
+        "question": "What does the source establish about spatial? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient waited inside the locked room while the threatening visitor remained outside.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "spatial-holdout-paraphrase",
+    "case_id": "spatial-holdout",
+    "family": "spatial",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient waited inside the locked room while the threatening visitor remained outside.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. A locked door separated the patient inside the room from the threatening visitor outside.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The patient waited inside the locked room while the threatening visitor remained outside.",
+        "source_span": [
+          129,
+          218
+        ],
+        "question": "What does the source establish about spatial? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient waited inside the locked room while the threatening visitor remained outside.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "spatial-holdout-altered",
+    "case_id": "spatial-holdout",
+    "family": "spatial",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient waited inside the locked room while the threatening visitor remained outside.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The threatening visitor waited inside the locked room while the patient remained outside.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The patient waited inside the locked room while the threatening visitor remained outside.",
+        "source_span": [
+          129,
+          218
+        ],
+        "question": "What does the source establish about spatial? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient waited inside the locked room while the threatening visitor remained outside.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "spatial-holdout-deleted",
+    "case_id": "spatial-holdout",
+    "family": "spatial",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient waited inside the locked room while the threatening visitor remained outside.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-REL"
+        ],
+        "evidence": "The patient waited inside the locked room while the threatening visitor remained outside.",
+        "source_span": [
+          129,
+          218
+        ],
+        "question": "What does the source establish about spatial? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient waited inside the locked room while the threatening visitor remained outside.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "deletion-development-unchanged",
+    "case_id": "deletion-development",
+    "family": "deletion",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient reports breathlessness when climbing stairs and no breathlessness at rest.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient reports breathlessness when climbing stairs and no breathlessness at rest.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient reports breathlessness when climbing stairs and no breathlessness at rest.",
+        "source_span": [
+          142,
+          228
+        ],
+        "question": "What does the source establish about deletion? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient reports breathlessness when climbing stairs and no breathlessness at rest.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "deletion-development-paraphrase",
+    "case_id": "deletion-development",
+    "family": "deletion",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient reports breathlessness when climbing stairs and no breathlessness at rest.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. Climbing stairs causes reported breathlessness, which is absent at rest.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient reports breathlessness when climbing stairs and no breathlessness at rest.",
+        "source_span": [
+          142,
+          228
+        ],
+        "question": "What does the source establish about deletion? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient reports breathlessness when climbing stairs and no breathlessness at rest.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "deletion-development-altered",
+    "case_id": "deletion-development",
+    "family": "deletion",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient reports breathlessness when climbing stairs and no breathlessness at rest.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient reports breathlessness at rest and no breathlessness when climbing stairs.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient reports breathlessness when climbing stairs and no breathlessness at rest.",
+        "source_span": [
+          142,
+          228
+        ],
+        "question": "What does the source establish about deletion? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient reports breathlessness when climbing stairs and no breathlessness at rest.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "deletion-development-deleted",
+    "case_id": "deletion-development",
+    "family": "deletion",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient reports breathlessness when climbing stairs and no breathlessness at rest.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-SYMPT"
+        ],
+        "evidence": "The patient reports breathlessness when climbing stairs and no breathlessness at rest.",
+        "source_span": [
+          142,
+          228
+        ],
+        "question": "What does the source establish about deletion? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient reports breathlessness when climbing stairs and no breathlessness at rest.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "deletion-holdout-unchanged",
+    "case_id": "deletion-holdout",
+    "family": "deletion",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient stopped attending therapy because transport became unaffordable, not because symptoms improved.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient stopped attending therapy because transport became unaffordable, not because symptoms improved.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-TECH"
+        ],
+        "evidence": "The patient stopped attending therapy because transport became unaffordable, not because symptoms improved.",
+        "source_span": [
+          129,
+          236
+        ],
+        "question": "What does the source establish about deletion? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient stopped attending therapy because transport became unaffordable, not because symptoms improved.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "deletion-holdout-paraphrase",
+    "case_id": "deletion-holdout",
+    "family": "deletion",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient stopped attending therapy because transport became unaffordable, not because symptoms improved.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. Unaffordable travel, rather than symptom improvement, led the patient to stop therapy attendance.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-TECH"
+        ],
+        "evidence": "The patient stopped attending therapy because transport became unaffordable, not because symptoms improved.",
+        "source_span": [
+          129,
+          236
+        ],
+        "question": "What does the source establish about deletion? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient stopped attending therapy because transport became unaffordable, not because symptoms improved.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "deletion-holdout-altered",
+    "case_id": "deletion-holdout",
+    "family": "deletion",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient stopped attending therapy because transport became unaffordable, not because symptoms improved.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient stopped attending therapy because symptoms improved, not because transport became unaffordable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-TECH"
+        ],
+        "evidence": "The patient stopped attending therapy because transport became unaffordable, not because symptoms improved.",
+        "source_span": [
+          129,
+          236
+        ],
+        "question": "What does the source establish about deletion? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient stopped attending therapy because transport became unaffordable, not because symptoms improved.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "deletion-holdout-deleted",
+    "case_id": "deletion-holdout",
+    "family": "deletion",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient stopped attending therapy because transport became unaffordable, not because symptoms improved.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "utility-only",
+        "labels": [
+          "KEEP-TECH"
+        ],
+        "evidence": "The patient stopped attending therapy because transport became unaffordable, not because symptoms improved.",
+        "source_span": [
+          129,
+          236
+        ],
+        "question": "What does the source establish about deletion? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient stopped attending therapy because transport became unaffordable, not because symptoms improved.",
+        "privacy_criteria": [],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "geography-development-unchanged",
+    "case_id": "geography-development",
+    "family": "geography",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient travels from Shimla; the steep uphill route to treatment worsens breathlessness.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient travels from Shimla; the steep uphill route to treatment worsens breathlessness.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-GEO",
+          "DIR-GEO"
+        ],
+        "evidence": "The patient travels from Shimla; the steep uphill route to treatment worsens breathlessness.",
+        "source_span": [
+          142,
+          234
+        ],
+        "question": "What does the source establish about geography? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient travels from Shimla; the steep uphill route to treatment worsens breathlessness.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Shimla"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "geography-development-paraphrase",
+    "case_id": "geography-development",
+    "family": "geography",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient travels from Shimla; the steep uphill route to treatment worsens breathlessness.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient travels from a hill town; the steep uphill route to treatment worsens breathlessness.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-GEO",
+          "DIR-GEO"
+        ],
+        "evidence": "The patient travels from Shimla; the steep uphill route to treatment worsens breathlessness.",
+        "source_span": [
+          142,
+          234
+        ],
+        "question": "What does the source establish about geography? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient travels from Shimla; the steep uphill route to treatment worsens breathlessness.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Shimla"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "geography-development-altered",
+    "case_id": "geography-development",
+    "family": "geography",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient travels from Shimla; the steep uphill route to treatment worsens breathlessness.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient travels from a hill town; the steep uphill route to treatment improves breathlessness.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-GEO",
+          "DIR-GEO"
+        ],
+        "evidence": "The patient travels from Shimla; the steep uphill route to treatment worsens breathlessness.",
+        "source_span": [
+          142,
+          234
+        ],
+        "question": "What does the source establish about geography? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient travels from Shimla; the steep uphill route to treatment worsens breathlessness.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Shimla"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "geography-development-deleted",
+    "case_id": "geography-development",
+    "family": "geography",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient travels from Shimla; the steep uphill route to treatment worsens breathlessness.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-GEO",
+          "DIR-GEO"
+        ],
+        "evidence": "The patient travels from Shimla; the steep uphill route to treatment worsens breathlessness.",
+        "source_span": [
+          142,
+          234
+        ],
+        "question": "What does the source establish about geography? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient travels from Shimla; the steep uphill route to treatment worsens breathlessness.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Shimla"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "geography-holdout-unchanged",
+    "case_id": "geography-holdout",
+    "family": "geography",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After moving from Pune, the patient experienced discrimination about regional background and became reluctant to attend the group.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After moving from Pune, the patient experienced discrimination about regional background and became reluctant to attend the group.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-GEO",
+          "DIR-GEO"
+        ],
+        "evidence": "After moving from Pune, the patient experienced discrimination about regional background and became reluctant to attend the group.",
+        "source_span": [
+          129,
+          259
+        ],
+        "question": "What does the source establish about geography? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "After moving from Pune, the patient experienced discrimination about regional background and became reluctant to attend the group.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Pune"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "geography-holdout-paraphrase",
+    "case_id": "geography-holdout",
+    "family": "geography",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After moving from Pune, the patient experienced discrimination about regional background and became reluctant to attend the group.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After moving from another city, the patient experienced regional discrimination and grew reluctant to attend the group.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-GEO",
+          "DIR-GEO"
+        ],
+        "evidence": "After moving from Pune, the patient experienced discrimination about regional background and became reluctant to attend the group.",
+        "source_span": [
+          129,
+          259
+        ],
+        "question": "What does the source establish about geography? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "After moving from Pune, the patient experienced discrimination about regional background and became reluctant to attend the group.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Pune"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "geography-holdout-altered",
+    "case_id": "geography-holdout",
+    "family": "geography",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After moving from Pune, the patient experienced discrimination about regional background and became reluctant to attend the group.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After moving from another city, the patient experienced regional acceptance and grew eager to attend the group.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-GEO",
+          "DIR-GEO"
+        ],
+        "evidence": "After moving from Pune, the patient experienced discrimination about regional background and became reluctant to attend the group.",
+        "source_span": [
+          129,
+          259
+        ],
+        "question": "What does the source establish about geography? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "After moving from Pune, the patient experienced discrimination about regional background and became reluctant to attend the group.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Pune"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "geography-holdout-deleted",
+    "case_id": "geography-holdout",
+    "family": "geography",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After moving from Pune, the patient experienced discrimination about regional background and became reluctant to attend the group.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-GEO",
+          "DIR-GEO"
+        ],
+        "evidence": "After moving from Pune, the patient experienced discrimination about regional background and became reluctant to attend the group.",
+        "source_span": [
+          129,
+          259
+        ],
+        "question": "What does the source establish about geography? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "After moving from Pune, the patient experienced discrimination about regional background and became reluctant to attend the group.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Pune"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "rare_event-development-unchanged",
+    "case_id": "rare_event-development",
+    "family": "rare_event",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient survived the 2021 Bhandara bridge collapse and now avoids bridges because they evoke memories of the event.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient survived the 2021 Bhandara bridge collapse and now avoids bridges because they evoke memories of the event.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "NAR-RARE"
+        ],
+        "evidence": "The patient survived the 2021 Bhandara bridge collapse and now avoids bridges because they evoke memories of the event.",
+        "source_span": [
+          142,
+          261
+        ],
+        "question": "What does the source establish about rare event? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient survived the 2021 Bhandara bridge collapse and now avoids bridges because they evoke memories of the event.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "2021 Bhandara bridge collapse",
+              "Bhandara"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "rare_event-development-paraphrase",
+    "case_id": "rare_event-development",
+    "family": "rare_event",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient survived the 2021 Bhandara bridge collapse and now avoids bridges because they evoke memories of the event.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient survived a bridge collapse and now avoids bridges because they evoke memories of the event.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "NAR-RARE"
+        ],
+        "evidence": "The patient survived the 2021 Bhandara bridge collapse and now avoids bridges because they evoke memories of the event.",
+        "source_span": [
+          142,
+          261
+        ],
+        "question": "What does the source establish about rare event? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient survived the 2021 Bhandara bridge collapse and now avoids bridges because they evoke memories of the event.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "2021 Bhandara bridge collapse",
+              "Bhandara"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "rare_event-development-altered",
+    "case_id": "rare_event-development",
+    "family": "rare_event",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient survived the 2021 Bhandara bridge collapse and now avoids bridges because they evoke memories of the event.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient survived a bridge collapse and now seeks out bridges because they evoke pleasant memories of the event.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "NAR-RARE"
+        ],
+        "evidence": "The patient survived the 2021 Bhandara bridge collapse and now avoids bridges because they evoke memories of the event.",
+        "source_span": [
+          142,
+          261
+        ],
+        "question": "What does the source establish about rare event? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient survived the 2021 Bhandara bridge collapse and now avoids bridges because they evoke memories of the event.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "2021 Bhandara bridge collapse",
+              "Bhandara"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "rare_event-development-deleted",
+    "case_id": "rare_event-development",
+    "family": "rare_event",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The patient survived the 2021 Bhandara bridge collapse and now avoids bridges because they evoke memories of the event.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "NAR-RARE"
+        ],
+        "evidence": "The patient survived the 2021 Bhandara bridge collapse and now avoids bridges because they evoke memories of the event.",
+        "source_span": [
+          142,
+          261
+        ],
+        "question": "What does the source establish about rare event? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient survived the 2021 Bhandara bridge collapse and now avoids bridges because they evoke memories of the event.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "2021 Bhandara bridge collapse",
+              "Bhandara"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "rare_event-holdout-unchanged",
+    "case_id": "rare_event-holdout",
+    "family": "rare_event",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After receiving the fictional Cedar Award for emergency rescue, the patient felt guilt about the person they could not save.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After receiving the fictional Cedar Award for emergency rescue, the patient felt guilt about the person they could not save.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "NAR-RARE"
+        ],
+        "evidence": "After receiving the fictional Cedar Award for emergency rescue, the patient felt guilt about the person they could not save.",
+        "source_span": [
+          129,
+          253
+        ],
+        "question": "What does the source establish about rare event? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "After receiving the fictional Cedar Award for emergency rescue, the patient felt guilt about the person they could not save.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Cedar Award"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "rare_event-holdout-paraphrase",
+    "case_id": "rare_event-holdout",
+    "family": "rare_event",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After receiving the fictional Cedar Award for emergency rescue, the patient felt guilt about the person they could not save.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After receiving a rescue award, the patient felt guilt about the person they could not save.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "NAR-RARE"
+        ],
+        "evidence": "After receiving the fictional Cedar Award for emergency rescue, the patient felt guilt about the person they could not save.",
+        "source_span": [
+          129,
+          253
+        ],
+        "question": "What does the source establish about rare event? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "After receiving the fictional Cedar Award for emergency rescue, the patient felt guilt about the person they could not save.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Cedar Award"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "rare_event-holdout-altered",
+    "case_id": "rare_event-holdout",
+    "family": "rare_event",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After receiving the fictional Cedar Award for emergency rescue, the patient felt guilt about the person they could not save.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After receiving a rescue award, the patient felt pride about the person they could not save.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "NAR-RARE"
+        ],
+        "evidence": "After receiving the fictional Cedar Award for emergency rescue, the patient felt guilt about the person they could not save.",
+        "source_span": [
+          129,
+          253
+        ],
+        "question": "What does the source establish about rare event? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "After receiving the fictional Cedar Award for emergency rescue, the patient felt guilt about the person they could not save.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Cedar Award"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "rare_event-holdout-deleted",
+    "case_id": "rare_event-holdout",
+    "family": "rare_event",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. After receiving the fictional Cedar Award for emergency rescue, the patient felt guilt about the person they could not save.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "NAR-RARE"
+        ],
+        "evidence": "After receiving the fictional Cedar Award for emergency rescue, the patient felt guilt about the person they could not save.",
+        "source_span": [
+          129,
+          253
+        ],
+        "question": "What does the source establish about rare event? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "After receiving the fictional Cedar Award for emergency rescue, the patient felt guilt about the person they could not save.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Cedar Award"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "s1",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "cumulative-development-unchanged",
+    "case_id": "cumulative-development",
+    "family": "cumulative",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. In session one, the patient described being the only night ferryman in Kesar village. In session two, the patient explained that isolation at work worsened low mood.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. In session one, the patient described being the only night ferryman in Kesar village. In session two, the patient explained that isolation at work worsened low mood.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-OCC"
+        ],
+        "evidence": "In session one, the patient described being the only night ferryman in Kesar village. In session two, the patient explained that isolation at work worsened low mood.",
+        "source_span": [
+          142,
+          307
+        ],
+        "question": "What does the source establish about cumulative? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "In session one, the patient described being the only night ferryman in Kesar village. In session two, the patient explained that isolation at work worsened low mood.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "only night ferryman",
+              "Kesar"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "two_sessions",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "cumulative-development-paraphrase",
+    "case_id": "cumulative-development",
+    "family": "cumulative",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. In session one, the patient described being the only night ferryman in Kesar village. In session two, the patient explained that isolation at work worsened low mood.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. In session one, the patient described isolated night transport work in a village. In session two, the patient explained that isolation at work worsened low mood.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-OCC"
+        ],
+        "evidence": "In session one, the patient described being the only night ferryman in Kesar village. In session two, the patient explained that isolation at work worsened low mood.",
+        "source_span": [
+          142,
+          307
+        ],
+        "question": "What does the source establish about cumulative? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "In session one, the patient described being the only night ferryman in Kesar village. In session two, the patient explained that isolation at work worsened low mood.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "only night ferryman",
+              "Kesar"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "two_sessions",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "cumulative-development-altered",
+    "case_id": "cumulative-development",
+    "family": "cumulative",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. In session one, the patient described being the only night ferryman in Kesar village. In session two, the patient explained that isolation at work worsened low mood.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. In session one, the patient described isolated night transport work in a village. In session two, the patient explained that isolation at work improved low mood.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-OCC"
+        ],
+        "evidence": "In session one, the patient described being the only night ferryman in Kesar village. In session two, the patient explained that isolation at work worsened low mood.",
+        "source_span": [
+          142,
+          307
+        ],
+        "question": "What does the source establish about cumulative? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "In session one, the patient described being the only night ferryman in Kesar village. In session two, the patient explained that isolation at work worsened low mood.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "only night ferryman",
+              "Kesar"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "two_sessions",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "cumulative-development-deleted",
+    "case_id": "cumulative-development",
+    "family": "cumulative",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "development",
+    "source": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. In session one, the patient described being the only night ferryman in Kesar village. In session two, the patient explained that isolation at work worsened low mood.",
+    "output": "At follow-up, the patient and clinician reviewed the current concern. The clinician asked for clarification rather than assuming a diagnosis. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-OCC"
+        ],
+        "evidence": "In session one, the patient described being the only night ferryman in Kesar village. In session two, the patient explained that isolation at work worsened low mood.",
+        "source_span": [
+          142,
+          307
+        ],
+        "question": "What does the source establish about cumulative? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "In session one, the patient described being the only night ferryman in Kesar village. In session two, the patient explained that isolation at work worsened low mood.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "only night ferryman",
+              "Kesar"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "two_sessions",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "cumulative-holdout-unchanged",
+    "case_id": "cumulative-holdout",
+    "family": "cumulative",
+    "method": "unchanged",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient works at the fictional Blue Lantern Observatory and runs its sole overnight telescope shift. The isolation makes panic harder to manage.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient works at the fictional Blue Lantern Observatory and runs its sole overnight telescope shift. The isolation makes panic harder to manage.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-OCC"
+        ],
+        "evidence": "The patient works at the fictional Blue Lantern Observatory and runs its sole overnight telescope shift. The isolation makes panic harder to manage.",
+        "source_span": [
+          129,
+          277
+        ],
+        "question": "What does the source establish about cumulative? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient works at the fictional Blue Lantern Observatory and runs its sole overnight telescope shift. The isolation makes panic harder to manage.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Blue Lantern Observatory",
+              "sole overnight telescope"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "two_sessions",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "cumulative-holdout-paraphrase",
+    "case_id": "cumulative-holdout",
+    "family": "cumulative",
+    "method": "paraphrase",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient works at the fictional Blue Lantern Observatory and runs its sole overnight telescope shift. The isolation makes panic harder to manage.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient works alone overnight at a scientific facility. The isolation makes panic harder to manage.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-OCC"
+        ],
+        "evidence": "The patient works at the fictional Blue Lantern Observatory and runs its sole overnight telescope shift. The isolation makes panic harder to manage.",
+        "source_span": [
+          129,
+          277
+        ],
+        "question": "What does the source establish about cumulative? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient works at the fictional Blue Lantern Observatory and runs its sole overnight telescope shift. The isolation makes panic harder to manage.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Blue Lantern Observatory",
+              "sole overnight telescope"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "two_sessions",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "cumulative-holdout-altered",
+    "case_id": "cumulative-holdout",
+    "family": "cumulative",
+    "method": "altered",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient works at the fictional Blue Lantern Observatory and runs its sole overnight telescope shift. The isolation makes panic harder to manage.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient works alone overnight at a scientific facility. The isolation makes panic easier to manage.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-OCC"
+        ],
+        "evidence": "The patient works at the fictional Blue Lantern Observatory and runs its sole overnight telescope shift. The isolation makes panic harder to manage.",
+        "source_span": [
+          129,
+          277
+        ],
+        "question": "What does the source establish about cumulative? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient works at the fictional Blue Lantern Observatory and runs its sole overnight telescope shift. The isolation makes panic harder to manage.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Blue Lantern Observatory",
+              "sole overnight telescope"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "two_sessions",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  },
+  {
+    "id": "cumulative-holdout-deleted",
+    "case_id": "cumulative-holdout",
+    "family": "cumulative",
+    "method": "deleted",
+    "stratum": "authored_metric_redteam",
+    "split": "holdout",
+    "source": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The patient works at the fictional Blue Lantern Observatory and runs its sole overnight telescope shift. The isolation makes panic harder to manage.",
+    "output": "At the next visit, the patient discussed what had changed since the previous appointment. A follow-up conversation was arranged. The clinical detail is unavailable.",
+    "cues": [
+      {
+        "id": "fact-1",
+        "role": "dual-role",
+        "labels": [
+          "DEM-OCC"
+        ],
+        "evidence": "The patient works at the fictional Blue Lantern Observatory and runs its sole overnight telescope shift. The isolation makes panic harder to manage.",
+        "source_span": [
+          129,
+          277
+        ],
+        "question": "What does the source establish about cumulative? Preserve actors, polarity, chronology, intensity and uncertainty without requiring exact identifying details.",
+        "answer": "The patient works at the fictional Blue Lantern Observatory and runs its sole overnight telescope shift. The isolation makes panic harder to manage.",
+        "privacy_criteria": [
+          {
+            "forbidden": [
+              "Blue Lantern Observatory",
+              "sole overnight telescope"
+            ]
+          }
+        ],
+        "critical": true,
+        "annotation_status": "single-author automated drafting; source-grounded; no clinician adjudication",
+        "session_id": "two_sessions",
+        "speaker": "reported patient",
+        "uncertainty": "author-defined intervention truth; external validity unestablished"
+      }
+    ]
+  }
+]

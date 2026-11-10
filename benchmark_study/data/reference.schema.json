@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Clinical utility reference case",
+  "type": "object",
+  "required": [
+    "id",
+    "split",
+    "source",
+    "cues"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "split": {
+      "enum": [
+        "development",
+        "holdout"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "labels",
+          "role",
+          "evidence",
+          "question",
+          "answer",
+          "privacy_criteria"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "labels": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "DIR-NAME",
+                "DIR-GEO",
+                "DIR-DATE",
+                "DIR-CONTACT",
+                "DIR-ID",
+                "APP-GROOM",
+                "APP-CTX",
+                "APP-PHYS",
+                "APP-AFFECT",
+                "DEM-AGE",
+                "DEM-OCC",
+                "DEM-GEO",
+                "DEM-FAM",
+                "DEM-COM",
+                "DEM-SES",
+                "DEM-SETTING",
+                "NAR-VERB",
+                "NAR-HOOK",
+                "NAR-RARE",
+                "NAR-THIRD",
+                "NAR-TEMP",
+                "NAR-IDIOM",
+                "NVB-BODY",
+                "NVB-VOICE",
+                "NVB-SILENCE",
+                "NVB-LANG",
+                "NVB-BOUND",
+                "INT-RESIST",
+                "INT-CONFRONT",
+                "INT-BOUNDARY",
+                "INT-DUAL",
+                "INT-TURN",
+                "CLI-CT",
+                "CLI-SELF",
+                "CLI-SUPER",
+                "CLI-HUMOUR",
+                "KEEP-SYMPT",
+                "KEEP-AFFECT",
+                "KEEP-TECH",
+                "KEEP-CULT",
+                "KEEP-REL"
+              ]
+            }
+          },
+          "role": {
+            "enum": [
+              "privacy-only",
+              "utility-only",
+              "dual-role"
+            ]
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "question": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          },
+          "privacy_criteria": {
+            "type": "array"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "version": "expanded-cues-v1",
+  "cases": 20,
+  "files": {
+    "inputs.json": "a10f055916ff1394e0888b612278a7be9c3a85c4f008ec0a6e3918cf3d46ad97",
+    "references.json": "7c3413b96cd0524890320f24d858f5f1a8ce8553e8fcb1d7917b47caaa510e52"
+  },
+  "source_cards": {
+    "challenge-source-cards.json": "fa84736753a7a36bba57cff1e6058d98ef236bce420d6a9bd717b0e82746df8c",
+    "aci-source-cards.json": "7339978188404d6425624c2876365798027338eb134ffd011c192b2f5241fc88"
+  },
+  "coverage": {
+    "APP-AFFECT": {
+      "development": 1,
+      "holdout": 1
+    },
+    "APP-CTX": {
+      "development": 1,
+      "holdout": 1
+    },
+    "APP-GROOM": {
+      "development": 1,
+      "holdout": 1
+    },
+    "APP-PHYS": {
+      "development": 1,
+      "holdout": 1
+    },
+    "CLI-CT": {
+      "development": 1,
+      "holdout": 1
+    },
+    "CLI-HUMOUR": {
+      "development": 2,
+      "holdout": 1
+    },
+    "CLI-SELF": {
+      "development": 1,
+      "holdout": 1
+    },
+    "CLI-SUPER": {
+      "development": 1,
+      "holdout": 1
+    },
+    "DEM-AGE": {
+      "development": 4,
+      "holdout": 3
+    },
+    "DEM-COM": {
+      "development": 2,
+      "holdout": 1
+    },
+    "DEM-FAM": {
+      "development": 1,
+      "holdout": 1
+    },
+    "DEM-GEO": {
+      "development": 2,
+      "holdout": 3
+    },
+    "DEM-OCC": {
+      "development": 3,
+      "holdout": 5
+    },
+    "DEM-SES": {
+      "development": 1,
+      "holdout": 1
+    },
+    "DEM-SETTING": {
+      "development": 2,
+      "holdout": 2
+    },
+    "DIR-CONTACT": {
+      "development": 1,
+      "holdout": 1
+    },
+    "DIR-DATE": {
+      "development": 1,
+      "holdout": 2
+    },
+    "DIR-GEO": {
+      "development": 3,
+      "holdout": 3
+    },
+    "DIR-ID": {
+      "development": 1,
+      "holdout": 2
+    },
+    "DIR-NAME": {
+      "development": 5,
+      "holdout": 5
+    },
+    "INT-BOUNDARY": {
+      "development": 1,
+      "holdout": 1
+    },
+    "INT-CONFRONT": {
+      "development": 1,
+      "holdout": 1
+    },
+    "INT-DUAL": {
+      "development": 2,
+      "holdout": 2
+    },
+    "INT-RESIST": {
+      "development": 2,
+      "holdout": 1
+    },
+    "INT-TURN": {
+      "development": 1,
+      "holdout": 1
+    },
+    "KEEP-AFFECT": {
+      "development": 3,
+      "holdout": 4
+    },
+    "KEEP-CULT": {
+      "development": 2,
+      "holdout": 2
+    },
+    "KEEP-REL": {
+      "development": 7,
+      "holdout": 5
+    },
+    "KEEP-SYMPT": {
+      "development": 5,
+      "holdout": 6
+    },
+    "KEEP-TECH": {
+      "development": 5,
+      "holdout": 5
+    },
+    "NAR-HOOK": {
+      "development": 1,
+      "holdout": 1
+    },
+    "NAR-IDIOM": {
+      "development": 1,
+      "holdout": 1
+    },
+    "NAR-RARE": {
+      "development": 1,
+      "holdout": 1
+    },
+    "NAR-TEMP": {
+      "development": 1,
+      "holdout": 1
+    },
+    "NAR-THIRD": {
+      "development": 2,
+      "holdout": 2
+    },
+    "NAR-VERB": {
+      "development": 1,
+      "holdout": 1
+    },
+    "NVB-BODY": {
+      "development": 1,
+      "holdout": 1
+    },
+    "NVB-BOUND": {
+      "development": 1,
+      "holdout": 1
+    },
+    "NVB-LANG": {
+      "development": 1,
+      "holdout": 1
+    },
+    "NVB-SILENCE": {
+      "development": 1,
+      "holdout": 1
+    },
+    "NVB-VOICE": {
+      "development": 1,
+      "holdout": 1
+    }
+  },
+  "evaluation_code": {
+    "clinical_benchmark/cue_spec.json": "978c8f1fc5111110db132c8f1cf20a5c6a0cf381408acf46d5ede640d94b978d",
+    "clinical_benchmark/scoring.py": "01286d618e8ecbf64897716427e3dd19a968b47e389c476a9f13946b87d09db1",
+    "clinical_benchmark/semantic.py": "43a431291804849f81bd9d11dae5033b82bd078be0bdc3cb52b2bcf45329f07b",
+    "clinical_benchmark/evidence.py": "0c0e47982f819d2e9b11ed13e15b40bd4f556e5a09bb54f6d3fbe467af4b7314",
+    "tools/judge_semantic_cues.py": "1bf343fae152a9161bcb41aae53d275fa72e3fa6942ec0c775a2e09047bce29a"
+  },
+  "source_revisions": {
+    "aci-bench": "b909b2bb9cf1d19de08df15cddde7bd0179665e4",
+    "philter": "4da3cf31c9bfbfd66c66b141c45ba7a47628dd0a",
+    "rupta": "6fe68085f7bb9428a773b4c90fda30dc5ca3414a"
+  },
+  "split_policy": "Challenge narratives authored separately before outputs: 8 development/8 holdout; ACI 2 source-train/2 source-test1 selected by input length then seed20261030. Same thematic families span challenge splits; no independent population generalization claimed.",
+  "unknown_modalities": "No acoustic/visual measurement; reported annotations only.",
+  "clinical_extras": "Unlabeled clinical reference facts supplement QA; excluded from 41-cue CPUPS averages, not silently assigned invented taxonomy labels."
+}
